@@ -83,13 +83,17 @@ const subscriptionPlans = [
   },
 ];
 
-const PlanCard = ({ plan }: any) => (
+const PlanCard = ({ plan, index }: any) => (
   <div
-    className={`w-full sm:w-[300px] flex flex-col justify-between p-6 rounded-2xl shadow-lg ${
-      plan.popular
-        ? "bg-white ring-2 ring-purple-500 scale-105"
-        : "bg-white/90 hover:shadow-xl"
-    } transition-all duration-300`}
+    className={`
+      w-full sm:w-[300px] flex flex-col justify-between p-6 rounded-2xl shadow-lg
+      transition-all duration-300 transform
+      hover:scale-105 hover:shadow-xl fade-in-up
+      ${plan.popular
+        ? "bg-white ring-2 ring-purple-500"
+        : "bg-white/90 hover:ring-2 hover:ring-blue-300"}
+    `}
+    style={{ animationDelay: `${index * 150}ms` }}
   >
     <div className="space-y-4">
       <div className="flex items-center gap-2 text-lg font-bold text-gray-800">
@@ -116,6 +120,7 @@ const PlanCard = ({ plan }: any) => (
     </button>
   </div>
 );
+
 
 export default function PricingSection() {
   return (

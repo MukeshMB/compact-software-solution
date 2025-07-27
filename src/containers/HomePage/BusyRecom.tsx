@@ -112,17 +112,17 @@ const BusyRecomFeatures = () => {
                 </h3>
 
                 {/* Features Grid */}
-                <div className="grid grid-cols-3 gap-12 px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 px-4">
                     {features.map((feature) => (
-                        <div key={feature.id} className="flex flex-col items-center text-center">
-                            {/* Icon Container with Concentric Circles */}
+                        <div key={feature.id} className="recom-feature-card flex flex-col items-center text-center">
+                            {/* Icon with concentric circles */}
                             <div className="relative mb-6">
                                 {/* Outer faded circle */}
-                                <div className="absolute inset-0 w-20 h-20 bg-blue-300 rounded-full opacity-30 -translate-x-2 -translate-y-2"></div>
+                                <div className="absolute w-20 h-20 bg-blue-300 rounded-full opacity-30 -translate-x-2 -translate-y-2"></div>
                                 {/* Middle faded circle */}
-                                <div className="absolute inset-0 w-18 h-18 bg-blue-400 rounded-full opacity-40 -translate-x-1 -translate-y-1"></div>
+                                <div className="absolute w-18 h-18 bg-blue-400 rounded-full opacity-40 -translate-x-1 -translate-y-1"></div>
                                 {/* Main icon circle */}
-                                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-lg relative z-10">
+                                <div className="icon-circle w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-lg relative z-10 transition-transform duration-300">
                                     <div className="text-white">
                                         {feature.icon}
                                     </div>
@@ -143,6 +143,7 @@ const BusyRecomFeatures = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
         </div>
     );

@@ -39,3 +39,175 @@ html {
   scrollbar-width: none;
   /* Firefox */
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.2) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.shimmer-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%);
+  animation: shimmer 2.5s infinite;
+  z-index: 1;
+}
+
+.shimmer-content {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  /* initial state */
+}
+
+/* globals.css */
+.glow-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.glow-border:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  /* blue glow */
+  transform: translateY(-4px);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.feature-card:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  /* blue glow */
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.6);
+  /* glow border */
+}
+
+.feature-glow-blue:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  /* blue */
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.feature-glow-purple:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+  /* purple */
+  border-color: rgba(168, 85, 247, 0.6);
+}
+
+.feature-glow-green:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  /* green */
+  border-color: rgba(34, 197, 94, 0.6);
+}
+
+/* Shared card animation and hover glow */
+.recom-feature-card {
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  will-change: transform, box-shadow, border-color;
+}
+
+.recom-feature-card:hover .icon-circle {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+/* global shimmer effect */
+.shimmer-text {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.shimmer-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 150%;
+  }
+}

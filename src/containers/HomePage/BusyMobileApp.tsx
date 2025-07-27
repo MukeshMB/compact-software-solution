@@ -16,7 +16,7 @@ export default function BusyMobileAppFeatures() {
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
+                    <div className="feature-card bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <FileText className="w-6 h-6 text-blue-400" />
                             <h4 className="text-lg font-semibold">Invoices, Orders & Quotations</h4>
@@ -26,7 +26,7 @@ export default function BusyMobileAppFeatures() {
                         </p>
                     </div>
 
-                    <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
+                    <div className="feature-card bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <Barcode className="w-6 h-6 text-purple-400" />
                             <h4 className="text-lg font-semibold">Barcode Scanning & Payments</h4>
@@ -36,7 +36,7 @@ export default function BusyMobileAppFeatures() {
                         </p>
                     </div>
 
-                    <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
+                    <div className="feature-card bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <Cloud className="w-6 h-6 text-green-400" />
                             <h4 className="text-lg font-semibold">Auto Sync & WhatsApp</h4>
@@ -46,6 +46,7 @@ export default function BusyMobileAppFeatures() {
                         </p>
                     </div>
                 </div>
+
 
                 {/* CTA */}
                 <div className="text-center mt-16">

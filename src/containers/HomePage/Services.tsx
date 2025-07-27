@@ -145,6 +145,16 @@ ${formData.studentName || 'Client'}
         });
     };
 
+    const cardBackgrounds = [
+        'bg-gradient-to-br from-blue-100 via-white to-purple-50',
+        'bg-gradient-to-br from-green-100 via-white to-teal-50',
+        'bg-gradient-to-br from-pink-100 via-white to-yellow-50',
+        'bg-gradient-to-br from-indigo-100 via-white to-blue-50',
+        'bg-gradient-to-br from-rose-100 via-white to-fuchsia-50',
+        'bg-gradient-to-br from-orange-100 via-white to-yellow-50',
+    ];
+
+
     return (
         <>
             <section id="services" className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-10 px-6 sm:px-10 lg:px-24">
@@ -165,16 +175,20 @@ ${formData.studentName || 'Client'}
                     {primaryServices.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 p-6 text-left border border-gray-100"
+                            className={`
+        rounded-2xl p-6 text-left border transition-all duration-300 shadow-sm
+        fade-in-up transform hover:scale-105 hover:shadow-xl
+        hover:border-blue-400 border-gray-100
+        ${cardBackgrounds[index % cardBackgrounds.length]}
+      `}
+                            style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
                         >
                             <div className="text-4xl mb-4 text-[#004080]">{service.icon}</div>
-                            <h3 className="text-lg font-semibold text-[#00214D]">
-                                {service.title}
-                            </h3>
+                            <h3 className="text-lg font-semibold text-[#00214D]">{service.title}</h3>
                             <p className="text-gray-600 text-sm mt-2">{service.desc}</p>
                             <button
                                 onClick={() => handleExploreCategory(service)}
-                                className="flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer"
+                                className="flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer mt-3"
                             >
                                 Discuss
                                 <ChevronRight className="w-4 h-4 ml-1" />
@@ -182,6 +196,7 @@ ${formData.studentName || 'Client'}
                         </div>
                     ))}
                 </div>
+
 
                 {/* Secondary Services Section */}
                 <div className="mt-20 text-center">
@@ -192,7 +207,13 @@ ${formData.studentName || 'Client'}
                         {secondaryServices.map((service, index) => (
                             <div
                                 key={index}
-                                className={`rounded-xl ${service.bg} p-4 shadow-sm hover:shadow-md transition text-left`}
+                                className={`
+        p-4 rounded-xl text-left shadow-sm transition-all duration-300
+        fade-in-up transform hover:scale-105 hover:shadow-xl
+        hover:border-blue-400 border border-gray-100
+        ${cardBackgrounds[index % cardBackgrounds.length]}
+      `}
+                                style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-3xl">{service.icon}</div>
@@ -203,7 +224,7 @@ ${formData.studentName || 'Client'}
                                         <p className="text-sm text-gray-700 leading-relaxed">{service.desc}</p>
                                         <button
                                             onClick={() => handleExploreCategory(service)}
-                                            className="flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer"
+                                            className="flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer mt-2"
                                         >
                                             Discuss
                                             <ChevronRight className="w-4 h-4 ml-1" />
@@ -213,8 +234,10 @@ ${formData.studentName || 'Client'}
                             </div>
                         ))}
                     </div>
+
                 </div>
             </section>
+
             {/* Futuristic Modal */}
             {isModalOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 flex-col h-full overflow-hidden">
