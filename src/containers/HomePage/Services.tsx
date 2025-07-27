@@ -130,7 +130,7 @@ ${formData.studentName || 'Client'}
 
     const handleSubmit = () => {
         const whatsappMessage = generateWhatsAppMessage();
-        const whatsappUrl = `https://wa.me/918873204593?text=${whatsappMessage}`;
+        const whatsappUrl = `https://wa.me/+919667337837?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
         setIsModalOpen(false);
     };

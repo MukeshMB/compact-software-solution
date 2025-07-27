@@ -8,7 +8,7 @@ export default function FloatingActionButtons() {
         >
             {/* WhatsApp Button */}
             <a
-                href="https://wa.me/918873204593?text=Hi%20Admission%20Wallah,%20I%20need%20guidance%20for%20college%20admission"
+                href="https://wa.me/919667337837?text=Hi%20Compact%20Softwares,%20I%20need%20to%20discuss%20about%20my%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 relative group flex items-center justify-center"
@@ -31,7 +31,7 @@ export default function FloatingActionButtons() {
 
             {/* Phone Button */}
             <a
-                href="tel:+916299390393"
+                href="tel:+919667337837"
                 className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 relative group flex items-center justify-center"
                 style={{ width: '60px', height: '60px' }}
             >
