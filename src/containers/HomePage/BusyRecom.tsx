@@ -77,34 +77,31 @@ const BusyRecomFeatures = () => {
                     <h1 className="text-4xl font-bold text-blue-900 mb-4 tracking-tight">
                         BUSY Recom
                     </h1>
-                    <p className="text-lg text-gray-600 mb-8">
+                    <p className="text-lg text-gray-600 mb-6">
                         (E-Commerce Reconciliation Plugin)
                     </p>
-                    <h2 className="text-3xl font-semibold text-blue-900 mb-12 tracking-tight">
+                    <h2 className="text-3xl font-semibold text-blue-900 mb-10 tracking-tight">
                         Simplify Marketplace Reconciliation
                     </h2>
 
-                    {/* Highlights */}
-                    <div className="flex justify-center mb-12">
-                        <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 shadow-lg max-w-2xl">
-                            <h3 className="text-xl font-semibold text-blue-900 mb-6">Key Highlights:</h3>
-                            <div className="space-y-4 text-left">
-                                <div className="flex items-center space-x-3">
-                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                    <span className="text-gray-700 font-medium">No third-party plugin required</span>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                    <span className="text-gray-700 font-medium">Manage multiple marketplace accounts</span>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                    <span className="text-gray-700 font-medium">Fast, easy-to-use system with dedicated support</span>
-                                </div>
-                            </div>
+                    {/* Key Highlights */}
+                    <div className="flex flex-col sm:flex-row sm:justify-center sm:space-x-10 gap-6 text-left max-w-4xl mx-auto px-4">
+                        <div className="flex items-start space-x-3">
+                            <span className="mt-1 w-3 h-3 bg-blue-500 rounded-full"></span>
+                            <p className="text-gray-800 font-medium">No third-party plugin required</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                            <span className="mt-1 w-3 h-3 bg-blue-500 rounded-full"></span>
+                            <p className="text-gray-800 font-medium">Manage multiple marketplace accounts</p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                            <span className="mt-1 w-3 h-3 bg-blue-500 rounded-full"></span>
+                            <p className="text-gray-800 font-medium">Fast, easy-to-use system with dedicated support</p>
                         </div>
                     </div>
                 </div>
+
+
 
                 {/* Core Features Title */}
                 <h3 className="text-2xl font-semibold text-center text-blue-900 mb-12 tracking-tight">

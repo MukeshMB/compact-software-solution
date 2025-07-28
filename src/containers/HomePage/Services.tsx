@@ -146,12 +146,19 @@ ${formData.studentName || 'Client'}
     };
 
     const cardBackgrounds = [
-        'bg-gradient-to-br from-blue-100 via-white to-purple-50',
-        'bg-gradient-to-br from-green-100 via-white to-teal-50',
-        'bg-gradient-to-br from-pink-100 via-white to-yellow-50',
-        'bg-gradient-to-br from-indigo-100 via-white to-blue-50',
-        'bg-gradient-to-br from-rose-100 via-white to-fuchsia-50',
-        'bg-gradient-to-br from-orange-100 via-white to-yellow-50',
+        'bg-gradient-to-br from-blue-300 to-purple-300',     // Card 1
+        'bg-gradient-to-br from-pink-300 to-blue-300',       // Card 2
+        'bg-gradient-to-br from-purple-300 to-pink-300',     // Card 3
+        'bg-gradient-to-br from-indigo-300 to-purple-100',  // Card 4
+        'bg-gradient-to-br from-sky-300 to-pink-100',       // Card 5
+        'bg-gradient-to-br from-rose-300 to-blue-300',       // Card 6
+        'bg-gradient-to-br from-teal-300 to-indigo-300',     // Card 7
+        'bg-gradient-to-br from-yellow-300 to-fuchsia-300',  // Card 8
+        'bg-gradient-to-br from-lime-300 to-emerald-300',    // Card 9
+        'bg-gradient-to-br from-orange-300 to-amber-300',    // Card 10
+        'bg-gradient-to-br from-cyan-300 to-blue-300',      // Card 11
+        'bg-gradient-to-br from-red-300 to-pink-300',       // Card 12
+        'bg-gradient-to-br from-green-300 to-emerald-300',  // Card 13
     ];
 
 
@@ -197,7 +204,6 @@ ${formData.studentName || 'Client'}
                     ))}
                 </div>
 
-
                 {/* Secondary Services Section */}
                 <div className="mt-20 text-center">
                     <h3 className="text-xl font-bold text-[#00214D] mb-10">
@@ -234,7 +240,6 @@ ${formData.studentName || 'Client'}
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
 

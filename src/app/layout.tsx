@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Baloo_2, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +12,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const baloo2 = Baloo_2({
+  weight: ['600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
   title: "Compact Softwares & Services (CSS) – Trusted IT & BUSY ERP Solutions Since 1996",
@@ -113,8 +121,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${baloo2.className} antialiased`}
       >
+        <NextTopLoader
+          color="#3B82F6"         // Customize color
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={4}
+          crawl={true}
+          showSpinner={false}
+          easing="ease"
+          speed={200}
+        />
         {children}
       </body>
     </html>

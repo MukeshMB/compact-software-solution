@@ -1,117 +1,99 @@
+"use client";
+
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
-// Define outer edge-only positions (keep away from center)
-const logoPositions = [
-    { top: "15%", left: "5%" },
-    { top: "15%", left: "95%" },
-
-    { top: "20%", left: "15%" },
-    { top: "20%", left: "85%" },
-
-    { top: "30%", left: "10%" },
-    { top: "30%", left: "90%" },
-
-    { top: "35%", left: "20%" },
-    { top: "35%", left: "80%" },
-
-    { top: "45%", left: "5%" },
-    { top: "45%", left: "95%" },
-
-    { top: "50%", left: "15%" },
-    { top: "50%", left: "85%" },
-
-    { top: "60%", left: "5%" },
-    { top: "60%", left: "95%" },
-
-    { top: "70%", left: "10%" },
-    { top: "70%", left: "90%" },
-
-    { top: "80%", left: "15%" },
-    { top: "80%", left: "85%" },
-
-    { top: "85%", left: "25%" },
-    { top: "85%", left: "75%" },
-
-    { top: "95%", left: "30%" },
-    { top: "95%", left: "70%" },
-
-    { top: "100%", left: "5%" },
-    { top: "100%", left: "95%" },
+const slides = [
+    {
+        title: "29th Anniversary",
+        description: "Celebrating 29 years of trust, innovation, and excellence! We thank our clients, partners, and team members who made this journey possible. Here's to many more years of growth together.",
+        image: "/images/anniversary.jpg"
+    },
+    {
+        title: "Business Accounting Software",
+        description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
+        image: "/images/accounting.jpg"
+    },
+    {
+        title: "ERP",
+        description: "Production Erp solutions Smart ERP for Smart Production. Plan, Track, and Optimize. All in One Integrated System.",
+        image: "/images/erp.jpg"
+    },
+    {
+        title: "Invoices",
+        description: "Simplify Your Checkout Process. Barcode Billing Made Easy. Reliable POS for Every Business.",
+        image: "/images/invoice.jpg"
+    }
 ];
 
-const logos = Array.from({ length: 18 }, (_, i) => ({
-    src: `/icons/${i + 1}.png`,
-    ...logoPositions[i],
-}));
+export default function Hero() {
+    const [current, setCurrent] = useState(0);
 
-export default function HeroSection() {
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 6000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <section id="home" className="relative bg-[#05092D] min-h-screen px-4 sm:px-8 py-15 overflow-hidden">
-            {/* Main Grid Content */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col items-center text-center gap-10">
-                {/* Hero Heading Section */}
-                <div className="space-y-4">
-                    {/* Tagline */}
-                    <span className="text-green-600 px-4 py-1.5 rounded text-xs sm:text-sm font-semibold tracking-wider">
-                        SOFTWARE DEVELOPMENT
-                    </span>
+        <section id='home' className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/banner.jpg")' }}>
+            <div className="absolute inset-0 bg-black/50" />
 
-                    <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
-
-                    {/* Hero Headings */}
-                    <div className="space-y-1">
-                        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                            Your Technology Partner
-                        </h1>
-                        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                            <span className="text-blue-500">Together We Succeed </span>
-                        </h1>
-                    </div>
-
-                    {/* Subtext */}
-                    <p className="text-sm sm:text-base md:text-lg text-white/80 font-light hover:scale-105 transition duration-300">
-                        <span className="relative inline-block shimmer-text-hero">
-                            Serving You Since{" "}
-                            <span className="text-yellow-400 font-medium">29+ Years</span>
-                        </span>
-                    </p>
+            <div className="relative z-10 container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+                {/* Text */}
+                {/* Text */}
+                <div className="w-full lg:w-1/2 relative h-[220px] md:h-[260px] lg:h-[280px] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={current}
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <motion.h1
+                                initial={{ x: -30, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: 0.1, duration: 0.6 }}
+                                className="text-4xl md:text-6xl font-baloo font-bold text-white tracking-wide drop-shadow-[2px_2px_3px_rgba(0,0,0,0.3)] mb-4"
+                            >
+                                {slides[current].title}
+                            </motion.h1>
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.3, duration: 0.6 }}
+                                className="text-xl sm:text-2xl text-white/90"
+                            >
+                                {slides[current].description}
+                            </motion.p>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
 
 
-                {/* Hero Image with Positioned Button */}
-                <div className="relative w-full max-w-3xl">
-                    <Image
-                        src="/images/hero.png"
-                        alt="Compact Software Image 1"
-                        width={400}
-                        height={400}
-                        className="object-contain rounded-2xl w-full"
-                    />
-
-                    <button className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold text-sm sm:text-base px-6 py-3 rounded-lg shadow-xl hover:shadow-orange-500/25 transition-all duration-300">
-                        Read More
-                    </button>
+                {/* Image */}
+                <div className="w-full lg:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-all duration-700 ease-in-out 
+                                ${index === current ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
+                            `}
+                        >
+                            <Image
+                                src={slide.image}
+                                alt="Slide Image"
+                                layout="fill"
+                                objectFit="contain"
+                                className="transition-transform duration-700 ease-in-out"
+                            />
+                        </div>
+                    ))}
                 </div>
-
-            </div>
-
-
-            {/* Scattered Logos in background away from center */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                {logos.map((logo, idx) => (
-                    <Image
-                        key={idx}
-                        src={logo.src}
-                        alt={`tech-logo-${idx + 1}`}
-                        width={50}
-                        height={50}
-                        className="absolute opacity-20 lg:opacity-50"
-                        style={{
-                            top: logo.top,
-                            left: logo.left,
-                        }}
-                    />
-                ))}
             </div>
         </section>
     );
