@@ -2,8 +2,8 @@ import { CloudUpload } from "lucide-react";
 
 export default function BusyCloud() {
     return (
-        <section className="relative w-full py-7 md:py-10 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden">
-            <div className="max-w-6xl mx-auto px-4 shimmer-wrapper">
+        <section className="relative w-full py-7 md:py-10 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden  shimmer-wrapper">
+            <div className="max-w-6xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-10 shimmer-content">
 
                     {/* Text Content */}

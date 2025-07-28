@@ -70,7 +70,7 @@ export default function HeroSection() {
 
                     {/* Subtext */}
                     <p className="text-sm sm:text-base md:text-lg text-white/80 font-light hover:scale-105 transition duration-300">
-                        <span className="relative inline-block shimmer-text">
+                        <span className="relative inline-block shimmer-text-hero">
                             Serving You Since{" "}
                             <span className="text-yellow-400 font-medium">29+ Years</span>
                         </span>
