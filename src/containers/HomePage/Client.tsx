@@ -1,23 +1,10 @@
 import Image from "next/image";
 
-const clientLogos = [
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-   "2.png",
-];
+const clientLogos = Array.from({ length: 37 }, (_, i) => `/clients/${i + 1}.jpg`);
 
 export default function Clients() {
     return (
-        <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-center text-3xl font-bold text-blue-900 mb-12 tracking-tight">
                     Our Clients
@@ -30,7 +17,7 @@ export default function Clients() {
                             className="relative h-16 w-full transition duration-300 ease-in-out"
                         >
                             <Image
-                                src={`/icons/${logo}`}
+                                src={`${logo}`}
                                 alt={logo.split(".")[0]}
                                 fill
                                 className="object-contain"

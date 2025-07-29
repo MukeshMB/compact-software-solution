@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/* Logo or About */}
                 <div>
-                    <h2 className="text-2xl font-bold mb-4">Compact Software Solution</h2>
+                    <h2 className="text-2xl font-bold mb-4">Compact Software {"&"} Solution</h2>
                     <p className="text-gray-400 text-sm leading-6">
                         Empowering businesses with intelligent accounting, GST training, and enterprise automation solutions across Delhi NCR.
                     </p>
@@ -29,8 +29,8 @@ export default function Footer() {
                         </li>
                         <li className="flex items-start gap-3">
                             <Mail className="w-4 h-4 mt-1 text-red-500" />
-                            <a href="mailto:sales@css.com" className="hover:underline">
-                                sales@css.com
+                            <a href="mailto:sales@cssbusy.com" className="hover:underline">
+                                sales@cssbusy.com
                             </a>
                         </li>
                         <li className="flex items-start gap-3">
@@ -50,7 +50,7 @@ export default function Footer() {
                 {/* Branches */}
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Our Branches</h3>
-                    <ul className="text-sm text-gray-300 space-y-2">
+                    <ul className="grid grid-cols-1 grid-rows-6 gap-x-6 gap-y-3 text-sm text-gray-300">
                         {[
                             { name: "Kundli", url: "https://maps.app.goo.gl/NoGL2qRGPMKJ1MRT6" },
                             { name: "Jhajjar", url: "https://maps.app.goo.gl/VQWKe1aGq7kHUszE6" },
@@ -61,19 +61,24 @@ export default function Footer() {
                         ].map((branch) => (
                             <li key={branch.name} className="flex items-start gap-2">
                                 <LocateIcon className="w-4 h-4 mt-0.5 text-red-500" />
-                                <a href={branch.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                <a
+                                    href={branch.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:underline"
+                                >
                                     {branch.name}
                                 </a>
                             </li>
                         ))}
                     </ul>
                 </div>
+
             </div>
 
             {/* Footer Bottom */}
-            <div className="border-t border-gray-800 mt-10 pt-4 text-sm text-gray-500 flex justify-between flex-col md:flex-row gap-4">
-                <p>© {new Date().getFullYear()} Compact Software Solution. All rights reserved.</p>
-                <p className="text-xs">Crafted with ❤️ by css tech team</p>
+            <div className="border-t border-gray-800 mt-10 pt-4 text-sm text-gray-500 flex justify-center text-center">
+                <p>© {new Date().getFullYear()} Compact Software {"&"} Solution. All rights reserved.</p>
             </div>
         </footer>
     );

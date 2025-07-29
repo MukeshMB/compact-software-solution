@@ -8,7 +8,7 @@ const slides = [
     {
         title: "29th Anniversary",
         description: "Celebrating 29 years of trust, innovation, and excellence! We thank our clients, partners, and team members who made this journey possible. Here's to many more years of growth together.",
-        image: "/images/anniversary.jpg"
+        image: "/images/anniversary.png"
     },
     {
         title: "Business Accounting Software",
@@ -38,11 +38,10 @@ export default function Hero() {
     }, []);
 
     return (
-        <section id='home' className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/banner.jpg")' }}>
-            <div className="absolute inset-0 bg-black/50" />
+        <section id='home' className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/banner.jpg")' }}>
+            <div className="absolute inset-0" />
 
             <div className="relative z-10 container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
-                {/* Text */}
                 {/* Text */}
                 <div className="w-full lg:w-1/2 relative h-[220px] md:h-[260px] lg:h-[280px] overflow-hidden">
                     <AnimatePresence mode="wait">

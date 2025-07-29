@@ -126,14 +126,13 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
     }, []);
 
     return (
-        <nav className="bg-white/95 backdrop-blur-xl shadow-md sticky top-0 z-50 border-b border-gray-200 h-[72px]">
+        <nav className="bg-white/95 backdrop-blur-xl shadow-md sticky top-0 z-50 border-b border-gray-200 h-[65px]">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-purple-50/30 to-blue-50/50 animate-pulse -z-10"></div>
-
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div className="flex justify-between items-center h-[72px]">
                     {/* Logo */}
                     <Link href={"/"} className="flex items-center cursor-pointer" >
-                        <Image src="/icons/logo.png" alt="Main Logo" width={140} height={60} className="object-contain" />
+                        <Image src="/icons/logo.png" alt="Main Logo" width={100} height={50} className="object-contain" />
                     </Link>
 
                     {/* Center Nav */}
@@ -195,7 +194,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                     {/* Right */}
                     <div className="flex items-center space-x-4">
                         <div className="hidden sm:block">
-                            <Image src="/icons/brand.jpg" alt="Brand Logo" width={160} height={80} className="object-contain" />
+                            <Image src="/icons/brand.jpg" alt="Brand Logo" width={100} height={50} className="object-contain" />
                         </div>
 
                         {/* Mobile Toggle */}
@@ -276,7 +275,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                 </Link>
                             ))}
                             <Link
-                                href="#services"
+                                href="/#services"
                                 onClick={() => {
                                     setIsMenuOpen(false);
                                     setShowMobileServices(false);

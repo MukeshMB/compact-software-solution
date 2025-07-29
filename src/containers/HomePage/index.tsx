@@ -24,7 +24,7 @@ export default function HomePage() {
             <BusyRecomSection />
             <Course />
             <Partner />
-            <Clients />
+            {/* <Clients /> */}
             <FloatingActionButtons />
         </div>
     );

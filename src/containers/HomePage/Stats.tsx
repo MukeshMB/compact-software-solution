@@ -83,7 +83,7 @@ function useCountUpOnView(target: number, duration = 1200) {
 
 export default function StatsBanner() {
   return (
-    <section className="relative py-15 px-4 bg-[#005ea4] overflow-hidden">
+    <section className="relative py-15 px-4 bg-[#09356C] overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 px-2">
           {stats.map((stat, idx) => {
@@ -92,7 +92,7 @@ export default function StatsBanner() {
               <div
                 key={idx}
                 ref={ref}
-                className="bg-white border border-gray-200 rounded-xl shadow-md px-4 py-7 text-left flex items-center gap-4 transition-transform duration-500 hover:scale-[1.05] hover:shadow-lg"
+                className="bg-white border border-gray-200 rounded-xl shadow-md px-4 py-7 text-left flex items-center gap-4 transition-transform duration-500 hover:scale-[1.1] hover:shadow-lg"
               >
                 <div className="w-15 h-15 flex items-center justify-center rounded-full border border-blue-100 shadow-sm bg-blue-50">
                   {stat.icon}

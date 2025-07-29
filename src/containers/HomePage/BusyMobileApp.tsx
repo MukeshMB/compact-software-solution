@@ -1,3 +1,5 @@
+"use client";
+
 import {
     FileText,
     Barcode,
@@ -12,26 +14,51 @@ export default function BusyMobileAppFeatures() {
             title: "Invoices, Orders & Quotations",
             description:
                 "Easily create and share invoices, orders, and quotations from anywhere.",
-            bg: "from-blue-500 via-sky-500 to-cyan-400",
+            bg: "from-[#FF5979] to-[#3C49BF]",
         },
         {
             icon: <Barcode className="w-6 h-6 text-white" />,
             title: "Barcode Scanning & Payments",
             description:
                 "Scan barcodes, collect customer payments, and tag salesmen seamlessly.",
-            bg: "from-purple-500 via-pink-500 to-red-400",
+            bg: "from-[#FF5979] to-[#3C49BF]",
         },
         {
             icon: <Cloud className="w-6 h-6 text-white" />,
             title: "Auto Sync & WhatsApp",
             description:
                 "Stay connected with real-time cloud sync and built-in WhatsApp integration.",
-            bg: "from-green-500 via-teal-400 to-emerald-400",
+            bg: "from-[#FF5979] to-[#3C49BF]",
         },
     ];
 
+    const handleRedirect = () => {
+        const userAgent = navigator.userAgent || navigator.vendor;
+        let url = '';
+        if (/android/i.test(userAgent)) {
+            // Android
+            url = 'https://play.google.com/store/apps/details?id=in.busy.app&hl=en_IN&pli=1';
+        } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+            // iOS
+            url = 'https://apps.apple.com/in/app/busy-gst-billing-accounting/id1662346018';
+        } else if (/Win(dows )?/i.test(userAgent)) {
+            // Windows
+            url = 'https://play.google.com/store/apps/details?id=in.busy.app&hl=en_IN&pli=1';
+        } else if (/Mac/i.test(userAgent)) {
+            // macOS
+            url = 'https://apps.apple.com/in/app/busy-gst-billing-accounting/id1662346018';
+        } else {
+            // Default fallback (Android Play Store as safest option)
+            url = 'https://play.google.com/store/apps/details?id=in.busy.app&hl=en_IN&pli=1';
+        }
+
+        window.open(url, '_blank');
+    };
+
+
+
     return (
-        <section className="relative w-full py-16 bg-[#005ea4] text-white overflow-hidden">
+        <section className="relative w-full py-16 bg-[#09356C] text-white overflow-hidden">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -48,7 +75,7 @@ export default function BusyMobileAppFeatures() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className={`feature-card group relative bg-gradient-to-br ${feature.bg} p-[2px] rounded-3xl transition-transform duration-300 transform hover:scale-105 hover:shadow-xl`}
+                            className={`feature-card group relative bg-gradient-to-b ${feature.bg} p-[2px] rounded-3xl transition-transform duration-300 transform hover:scale-105 hover:shadow-xl`}
                         >
                             <div className="bg-white/10 backdrop-blur-xl rounded-[22px] p-6 h-full flex flex-col justify-between border border-white/20 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                                 <div className="flex items-center gap-3 mb-4">
@@ -63,7 +90,7 @@ export default function BusyMobileAppFeatures() {
 
                 {/* CTA Button */}
                 <div className="text-center mt-16">
-                    <button className="group px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
+                    <button onClick={handleRedirect} className="group px-8 py-3 bg-[#00AA3E] text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
                         <span className="flex items-center gap-2">
                             Try the Mobile App
                             <Send className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />

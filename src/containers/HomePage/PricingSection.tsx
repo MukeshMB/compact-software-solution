@@ -11,7 +11,7 @@ import {
 const perpetualPlans = [
   {
     name: "BASIC",
-    price: "₹X,XXX",
+    price: "₹9,999",
     features: [
       "Unlimited Invoices",
       "GST e-Returns",
@@ -22,7 +22,7 @@ const perpetualPlans = [
   },
   {
     name: "STANDARD",
-    price: "₹X,XXX",
+    price: "₹14,999",
     popular: true,
     features: [
       "Unlimited Invoices",
@@ -34,7 +34,7 @@ const perpetualPlans = [
   },
   {
     name: "ENTERPRISE",
-    price: "₹X,XXX",
+    price: "₹19,999",
     features: [
       "User-wise Access Rights",
       "Voucher Approval",
@@ -48,7 +48,7 @@ const perpetualPlans = [
 const subscriptionPlans = [
   {
     name: "BLUE",
-    price: "₹X,XXX /yr",
+    price: "₹4,999 /yr",
     features: [
       "Cloud Sync",
       "GST Filing Automation",
@@ -59,7 +59,7 @@ const subscriptionPlans = [
   },
   {
     name: "SAFFRON",
-    price: "₹X,XXX /yr",
+    price: "₹6,999 /yr",
     popular: true,
     features: [
       "Call/Indent Management",
@@ -71,7 +71,7 @@ const subscriptionPlans = [
   },
   {
     name: "EMERALD",
-    price: "₹X,XXX /yr",
+    price: "₹9,999 /yr",
     features: [
       "GST Automation",
       "Multi-User Access",
@@ -84,7 +84,7 @@ const subscriptionPlans = [
 
 const PlanCard = ({ plan, index }: any) => (
   <div
-    className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform hover:scale-105`}
+    className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform ${plan.popular ? "scale-113  hover:scale-115" : " hover:scale-105"}`}
     style={{ animationDelay: `${index * 150}ms` }}
   >
     <div

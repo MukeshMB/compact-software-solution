@@ -8,7 +8,6 @@ const images = [
     "/images/client.jfif",
     "/images/team1.jpg",
     "/images/certificates.jpg",
-    "/images/team.jpg",
 ];
 
 export default function AboutUs() {

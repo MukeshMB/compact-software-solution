@@ -26,6 +26,15 @@ export default function ContactUsPage() {
         captcha: "",
     });
 
+    const [formErrors, setFormErrors] = useState<any>({
+        name: "",
+        email: "",
+        mobile: "",
+        message: "",
+        captcha: ""
+    });
+
+
     const [focusedField, setFocusedField] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [captchaCode, setCaptchaCode] = useState("");
@@ -59,29 +68,62 @@ export default function ContactUsPage() {
         generateCaptcha();
     }, []);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLFormElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
+
+        if (name === "mobile") {
+            // Allow only numbers, +, (, ), space and dash
+            const allowed = /^[0-9+\-()\s]*$/;
+            if (!allowed.test(value)) return;
+        }
+
         setForm({ ...form, [name]: value });
 
-        // Validate captcha in real-time
-        if (name === 'captcha') {
+        // Reset error on change
+        setFormErrors({ ...formErrors, [name]: "" });
+
+        if (name === "captcha") {
             validateCaptcha(value);
+            setFormErrors({ ...formErrors, captcha: "" });
         }
     };
 
+
     const handleSubmit = async () => {
-        // Validate required fields
-        if (!form.name || !form.email || !form.mobile || !form.message) {
-            alert("Please fill in all required fields");
-            return;
+        let errors = {
+            name: "",
+            email: "",
+            mobile: "",
+            message: "",
+            captcha: ""
+        };
+
+        // Validate fields
+        if (!form.name) errors.name = "Name is required.";
+        if (!form.email) {
+            errors.email = "Email is required.";
+        } else {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(form.email)) errors.email = "Invalid email format.";
         }
 
-        // Validate captcha
-        if (!captchaValid) {
-            alert("Please enter the correct captcha code");
-            return;
+        if (!form.mobile) {
+            errors.mobile = "Mobile number is required.";
+        } else {
+            const phoneRegex = /^[+()0-9\s-]{10,16}$/;
+            if (!phoneRegex.test(form.mobile)) errors.mobile = "Invalid phone number.";
         }
 
+        if (!form.message) errors.message = "Message cannot be empty.";
+        if (!captchaValid) errors.captcha = "Captcha is incorrect.";
+
+        setFormErrors(errors);
+
+        // Check if any error is set
+        const hasErrors = Object.values(errors).some(err => err !== "");
+        if (hasErrors) return;
+
+        // Proceed if no errors
         setIsSubmitting(true);
         const { name, email, mobile, message } = form;
         const encodedMessage = encodeURIComponent(
@@ -89,21 +131,21 @@ export default function ContactUsPage() {
         );
         const whatsappURL = `https://wa.me/917872727171?text=${encodedMessage}`;
 
-        // Simulate loading
         setTimeout(() => {
             window.open(whatsappURL, "_blank");
             setIsSubmitting(false);
-            // Reset form and generate new captcha
             setForm({
                 name: "",
                 email: "",
                 mobile: "",
                 message: "",
-                captcha: "",
+                captcha: ""
             });
+            setFormErrors({});
             generateCaptcha();
         }, 1000);
     };
+
 
     const contactInfo = [
         {
@@ -139,7 +181,7 @@ export default function ContactUsPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
             {/* Hero Section */}
-            <div className="relative py-6 px-4 text-center bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
+            <div className="relative py-6 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
 
                 {/* Decorative Blurs */}
@@ -168,35 +210,6 @@ export default function ContactUsPage() {
 
             <div className="max-w-7xl mx-auto px-4 py-16">
                 <div className="grid-cols-1 gap-12">
-                    {/* Contact Information */}
-                    {/* <div className="lg:col-span-1 space-y-8">
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
-                            <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                                <Phone className="w-6 h-6 text-blue-600" />
-                                Contact Information
-                            </h2>
-
-                            <div className="space-y-6">
-                                {contactInfo.map((info, index) => {
-                                    const Icon = info.icon;
-                                    return (
-                                        <div key={index} className="group p-4 rounded-2xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300">
-                                            <div className="flex items-start gap-4">
-                                                <div className={`p-3 rounded-xl bg-gradient-to-r ${info.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                                                    <Icon className="w-5 h-5 text-white" />
-                                                </div>
-                                                <div className="flex-1">
-                                                    <h3 className="font-semibold text-gray-800 mb-1">{info.title}</h3>
-                                                    <p className="text-gray-700 text-sm mb-1 leading-relaxed">{info.content}</p>
-                                                    <p className="text-gray-500 text-xs">{info.subtitle}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </div> */}
 
                     {/* Contact Form */}
                     <div className="col-span-1">
@@ -226,6 +239,12 @@ export default function ContactUsPage() {
                                             onFocus={() => setFocusedField('name')}
                                             onBlur={() => setFocusedField(null)}
                                         />
+                                        {formErrors.name && (
+                                            <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                                                <X className="w-4 h-4" />
+                                                {formErrors.name}
+                                            </p>
+                                        )}
                                     </div>
 
                                     {/* Mobile Field */}
@@ -247,6 +266,12 @@ export default function ContactUsPage() {
                                             onFocus={() => setFocusedField('mobile')}
                                             onBlur={() => setFocusedField(null)}
                                         />
+                                        {formErrors.mobile && (
+                                            <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                                                <X className="w-4 h-4" />
+                                                {formErrors.mobile}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
 
@@ -269,6 +294,12 @@ export default function ContactUsPage() {
                                         onFocus={() => setFocusedField('email')}
                                         onBlur={() => setFocusedField(null)}
                                     />
+                                    {formErrors.email && (
+                                        <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                                            <X className="w-4 h-4" />
+                                            {formErrors.email}
+                                        </p>
+                                    )}
                                 </div>
 
                                 {/* Message Field */}
@@ -290,6 +321,12 @@ export default function ContactUsPage() {
                                         onFocus={() => setFocusedField('message')}
                                         onBlur={() => setFocusedField(null)}
                                     />
+                                    {formErrors.message && (
+                                        <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                                            <X className="w-4 h-4" />
+                                            {formErrors.message}
+                                        </p>
+                                    )}
                                 </div>
 
                                 {/* Captcha Field */}
@@ -345,6 +382,12 @@ export default function ContactUsPage() {
                                             onBlur={() => setFocusedField(null)}
                                             maxLength={6}
                                         />
+                                        {formErrors.captcha && (
+                                            <p className="mt-2 text-sm text-red-600 flex items-center gap-1">
+                                                <X className="w-4 h-4" />
+                                                {formErrors.captcha}
+                                            </p>
+                                        )}
 
                                         {/* Validation Message */}
                                         {captchaValid === false && form.captcha !== "" && (
@@ -396,7 +439,7 @@ export default function ContactUsPage() {
 
                 {/* Additional Info Section */}
                 <div className="mt-16 text-center">
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-8 text-white">
+                    <div className="bg-[#09356C] rounded-3xl p-8 text-white">
                         <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
                         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                             <div className="flex items-center gap-3">
