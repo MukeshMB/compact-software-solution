@@ -180,7 +180,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                         </Link>
                                     ))}
                                     <Link
-                                        href="#services"
+                                        href="/#services"
                                         className="col-span-2 text-center py-2 bg-blue-50 text-blue-600 rounded-md text-sm font-semibold hover:bg-blue-100"
                                     >
                                         View All Services →

@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, LocateIcon } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-black text-white pt-12 pb-6 px-6 md:px-20 shadow-[0_-2px_12px_rgba(255,255,255,0.05)]">
+        <footer className="bg-[#09356C] text-white pt-12 pb-6 px-6 md:px-20 shadow-[0_-2px_12px_rgba(255,255,255,0.05)]">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/* Logo or About */}
                 <div>
