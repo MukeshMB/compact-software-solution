@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,40 +90,18 @@ const secondaryServices = [
 ];
 
 const navLinks = [
-    { name: 'Home', href: '/#home' },
-    { name: 'About', href: '/#about' },
-    { name: 'Pricing', href: '/#pricing' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contacts', href: '/contacts' },
 ]
 
-export function scrollToSection(sectionId: string) {
-    if (!sectionId) return;
-
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-}
 
 export default function FuturisticHeader({ activePage }: { activePage: string }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState(activePage);
     const [showMobileServices, setShowMobileServices] = useState(false);
 
-    useEffect(() => {
-        const handleHashChange = () => {
-            const hash = window.location.hash;
-            if (hash) {
-                setActiveSection(hash.replace("#", ""));
-            }
-        };
-
-        handleHashChange();
-        window.addEventListener("hashchange", handleHashChange);
-        return () => {
-            window.removeEventListener("hashchange", handleHashChange);
-        };
-    }, []);
 
     return (
         <nav className="bg-white/95 backdrop-blur-xl shadow-md sticky top-0 z-50 border-b border-gray-200 h-[65px]">
@@ -141,7 +119,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                onClick={() => { setActiveSection(item.name.toLowerCase()); scrollToSection(item.name.toLocaleLowerCase()); }}
+                                onClick={() => setActiveSection(item.name.toLowerCase())}
                                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.name.toLowerCase() ? 'text-blue-600 bg-blue-50 shadow-sm' : 'text-gray-700 hover:bg-gray-100'}`}
                             >
                                 {item.name}
@@ -179,12 +157,6 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                             </div>
                                         </Link>
                                     ))}
-                                    <Link
-                                        href="/#services"
-                                        className="col-span-2 text-center py-2 bg-blue-50 text-blue-600 rounded-md text-sm font-semibold hover:bg-blue-100"
-                                    >
-                                        View All Services →
-                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +204,6 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                 setIsMenuOpen(false);
                                 setActiveSection(item.name.toLowerCase());
                                 setShowMobileServices(false);
-                                scrollToSection(item.name.toLocaleLowerCase())
                             }}
                             className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 transform hover:translate-x-2 text-black ${activeSection === item.name.toLowerCase()
                                 ? 'bg-blue-50 border-l-4 border-blue-500 shadow-sm'
@@ -274,20 +245,8 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                     </div>
                                 </Link>
                             ))}
-                            <Link
-                                href="/#services"
-                                onClick={() => {
-                                    setIsMenuOpen(false);
-                                    setShowMobileServices(false);
-                                    setActiveSection("services");
-                                }}
-                                className="block text-center py-2 bg-blue-50 text-blue-600 rounded-md text-sm font-semibold hover:bg-blue-100"
-                            >
-                                View All Services →
-                            </Link>
                         </div>
                     )}
-
                 </div>
             </div>
         </nav>
