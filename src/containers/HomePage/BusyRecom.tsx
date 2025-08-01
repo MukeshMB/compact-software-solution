@@ -113,7 +113,7 @@ const BusyRecomFeatures = () => {
                     {features.map((feature) => (
                         <div key={feature.id} className="recom-feature-card flex flex-col items-center text-center">
                             {/* Icon with concentric circles */}
-                            <div className="relative mb-6">
+                            <div className="relative mb-6 animate-pulse">
                                 {/* Outer faded circle */}
                                 <div className="absolute w-20 h-20 bg-blue-300 rounded-full opacity-30 -translate-x-2 -translate-y-2"></div>
                                 {/* Middle faded circle */}

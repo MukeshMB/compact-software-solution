@@ -96,7 +96,6 @@ const navLinks = [
     { name: 'Contacts', href: '/contacts' },
 ]
 
-
 export default function FuturisticHeader({ activePage }: { activePage: string }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState(activePage);
@@ -104,13 +103,13 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
 
     return (
-        <nav className="bg-white/95 backdrop-blur-xl shadow-md sticky top-0 z-50 border-b border-gray-200 h-[65px]">
+        <nav className="bg-white/95 backdrop-blur-xl shadow-md sticky top-0 z-50 border-b border-gray-200 h-[70px]">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-purple-50/30 to-blue-50/50 animate-pulse -z-10"></div>
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div className="flex justify-between items-center h-[72px]">
                     {/* Logo */}
-                    <Link href={"/"} className="flex items-center cursor-pointer" >
-                        <Image src="/icons/logo.png" alt="Main Logo" width={100} height={50} className="object-contain" />
+                    <Link href={"/"} className="flex items-center cursor-pointer" onClick={() => setActiveSection("home")} >
+                        <Image src="/icons/logo.png" alt="Main Logo" width={120} height={70} className="object-contain" />
                     </Link>
 
                     {/* Center Nav */}
@@ -120,7 +119,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setActiveSection(item.name.toLowerCase())}
-                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${activeSection === item.name.toLowerCase() ? 'text-blue-600 bg-blue-50 shadow-sm' : 'text-gray-700 hover:bg-gray-100'}`}
+                                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:text-blue-500 ${activeSection === item.name.toLowerCase() ? 'text-blue-600 bg-blue-50 shadow-sm' : 'text-gray-700 hover:bg-gray-100'}`}
                             >
                                 {item.name}
                             </Link>
@@ -131,7 +130,6 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                             <div className="flex items-center">
                                 <button
                                     className="px-4 py-2 rounded-md text-sm font-medium flex items-center gap-1 text-black hover:bg-gray-100 transition"
-                                    onClick={() => setActiveSection("services")}
                                 >
                                     Services <ChevronDown size={16} />
                                 </button>
@@ -166,7 +164,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                     {/* Right */}
                     <div className="flex items-center space-x-4">
                         <div className="hidden sm:block">
-                            <Image src="/icons/brand.jpg" alt="Brand Logo" width={100} height={50} className="object-contain" />
+                            <Image src="/icons/brand.jpg" alt="Brand Logo" width={120} height={70} className="object-contain" />
                         </div>
 
                         {/* Mobile Toggle */}
@@ -216,7 +214,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
                     {/* Services Toggle */}
                     <button
-                        onClick={() => { setShowMobileServices(!showMobileServices); setActiveSection("services"); }}
+                        onClick={() => setShowMobileServices(!showMobileServices)}
                         className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 transform hover:translate-x-2 text-black shadow-sm`}
                     >
                         Services {showMobileServices ? '▲' : '▼'}

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
+import SplashButton from "./SplashButton";
 
 const images = [
     "/images/client.jfif",
@@ -59,7 +60,7 @@ export default function AboutUs() {
                 <div>
                     <div className="text-center md:text-left">
                         <span className="text-[#00AA3E] text-sm font-bold uppercase tracking-wide block">
-                            About Us
+                            About Compact Softwares & Services (CSS)
                         </span>
                         <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent tracking-wide">
                             Welcome to Compact Softwares & Services
@@ -67,19 +68,22 @@ export default function AboutUs() {
                     </div>
 
                     <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Compact Softwares & Services (CSS) has been a trusted name in IT solutions for over <strong>29+ years</strong>, proudly serving <strong>25,000+ clients</strong> across industries...
+                        Compact Softwares & Services (CSS) has been providing IT solutions for over <strong>29+ years</strong>, serving more than <strong>25,000+ customers</strong> across various industries.
+                        With a strong network of <strong>50+ IT Channel Associates</strong> and <strong>100+ accounting professionals</strong>, we deliver quality solutions for businesses of every size.
                     </p>
 
                     <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                        Since <strong>1996</strong>, we have been an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong>, consistently ranked as the <strong>No.1 performer</strong> in national sales...
+                        We are an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong> since <strong>1996</strong> and have consistently ranked <strong>No.1 in sales performance</strong>.
+                        Our clients range from local shopkeepers to large enterprises, and <strong>65% of our new leads</strong> come through referrals, reflecting our strong after-sales service.
                     </p>
 
                     <ul className="mt-6 space-y-3 text-sm sm:text-base text-gray-800">
                         {[
-                            "29+ Years of Expertise in Business Software",
-                            "25,000+ Clients Served",
+                            "29+ Years of Providing IT Solutions",
+                            "25,000+ Customers Across Industries",
                             "100+ Certified Accounting Professionals",
-                            "65% Client Referrals Rate"
+                            "50+ IT Channel Associates",
+                            "65% New Clients via Referrals"
                         ].map((point, i) => (
                             <li key={i} className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-blue-500 mt-1" />
@@ -88,14 +92,7 @@ export default function AboutUs() {
                         ))}
                     </ul>
 
-                    <div className="mt-8">
-                        <Link
-                            href="#contacts"
-                            className="inline-block bg-[#00AA3E] text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#009237] transition-all duration-300"
-                        >
-                            Learn More About Us
-                        </Link>
-                    </div>
+                    <SplashButton name="Learn More About Us" href="#contacts" />
                 </div>
             </div>
         </section>

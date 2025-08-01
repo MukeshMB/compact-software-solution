@@ -35,7 +35,7 @@ export const metadata = {
 export default function Pricing() {
     return (
         <>
-            <Header activePage="contacts" />
+            <Header activePage="pricing" />
             <PricingPage />
             <Footer />
             <FloatingActionButtons />

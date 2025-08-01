@@ -85,7 +85,7 @@ const subscriptionPlans = [
 
 const PlanCard = ({ plan, index }: any) => (
     <div
-        className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform ${plan.popular ? "scale-113  hover:scale-115" : " hover:scale-105"}`}
+        className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform ${plan.popular ? "scale-105 md:scale-113  hover:scale-115" : " hover:scale-105"}`}
         style={{ animationDelay: `${index * 150}ms` }}
     >
         <div
@@ -130,32 +130,21 @@ export default function PricingPage() {
             className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pb-50"
         >
             {/* Hero Section */}
-            <div className="relative py-6 px-4 text-center bg-[#09356C] text-white overflow-hidden">
+            <div className="relative py-3 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
-
-                {/* Decorative Blurs */}
-                <div className="absolute inset-0">
-                    <div className="absolute top-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-10 right-10 w-36 h-36 bg-cyan-300/10 rounded-full blur-2xl"></div>
-                </div>
 
                 {/* Main Content */}
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                        <MessageCircle className="w-6 h-6 text-cyan-300" />
-                        <span className="text-cyan-300 font-medium text-xs uppercase tracking-wide">Get in Touch</span>
-                    </div>
-
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                         Pricing
                     </h1>
 
                     <p className="text-base text-blue-100 max-w-xl mx-auto leading-relaxed">
-                        Ready to transform your business? We're here to help you every step of the way.
+                        We offers best pricing for you
                     </p>
                 </div>
             </div>
-            
+
             <div className="max-w-6xl mx-auto space-y-20 pt-5">
                 {/* Perpetual Plans */}
                 <div className="text-center space-y-10">

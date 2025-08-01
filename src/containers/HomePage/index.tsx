@@ -2,7 +2,6 @@ import AboutUs from './AboutUs';
 import BusyCloud from './BusyCloud';
 import BusyMobileApp from './BusyMobileApp';
 import BusyRecomSection from './BusyRecom';
-import Clients from './Client';
 import Course from './Course';
 import FloatingActionButtons from './FloatingActionButtons';
 import HeroSection from './HeroSection';
@@ -24,7 +23,6 @@ export default function HomePage() {
             <BusyRecomSection />
             <Course />
             <Partner />
-            {/* <Clients /> */}
             <FloatingActionButtons />
         </div>
     );

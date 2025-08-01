@@ -3,27 +3,30 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import SplashButton from "./SplashButton";
+import Link from "next/link";
+import BouncingSplashButton from "./BouncingSplashButton";
 
 const slides = [
     {
         title: "29th Anniversary",
-        description: "Celebrating 29 years of trust, innovation, and excellence! We thank our clients, partners, and team members who made this journey possible. Here's to many more years of growth together.",
+        description: "Delivering trusted IT services with innovation and excellence for over 29 years",
         image: "/images/anniversary.png"
     },
     {
         title: "Business Accounting Software",
         description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
-        image: "/images/accounting.jpg"
+        image: "/images/accounting.png"
     },
     {
         title: "ERP",
         description: "Production Erp solutions Smart ERP for Smart Production. Plan, Track, and Optimize. All in One Integrated System.",
-        image: "/images/erp.jpg"
+        image: "/images/erp.png"
     },
     {
         title: "Invoices",
         description: "Simplify Your Checkout Process. Barcode Billing Made Easy. Reliable POS for Every Business.",
-        image: "/images/invoice.jpg"
+        image: "/images/invoice.png"
     }
 ];
 
@@ -37,8 +40,10 @@ export default function Hero() {
         return () => clearInterval(interval);
     }, []);
 
+    // style={{ backgroundImage: 'url("/images/bg.png")' }}
+
     return (
-        <section id='home' className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/banner.jpg")' }}>
+        <section id='home' className="w-full relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-[#09356C]" style={{ backgroundImage: 'url("/images/banner3.jpg")' }}>
             <div className="absolute inset-0" />
 
             <div className="relative z-10 container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -75,25 +80,32 @@ export default function Hero() {
 
 
                 {/* Image */}
-                <div className="w-full lg:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
+                <div className="w-full lg:w-1/2 relative overflow-hidden h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-all duration-700 ease-in-out 
-                                ${index === current ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
-                            `}
+                            className={`absolute top-0 left-0 w-full h-full transition-all duration-700 ease-in-out
+        ${index === current
+                                    ? 'translate-x-0 opacity-100 z-20'
+                                    : 'opacity-0 z-10 ' +
+                                    (index < current
+                                        ? 'translate-x-[-100%]'
+                                        : 'translate-x-full')}
+      `}
                         >
                             <Image
                                 src={slide.image}
                                 alt="Slide Image"
-                                layout="fill"
-                                objectFit="contain"
-                                className="transition-transform duration-700 ease-in-out"
+                                fill
+                                style={{ objectFit: 'contain' }}
+                                className="w-full h-full transition-transform duration-700 ease-in-out"
                             />
                         </div>
                     ))}
                 </div>
             </div>
+
+            <BouncingSplashButton />
         </section>
     );
 }

@@ -34,36 +34,24 @@ export default function About() {
     }, [index]);
 
     return (
-        <main className="bmin-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pb-10">
-               {/* Hero Section */}
-            <div className="relative py-6 px-4 text-center bg-[#09356C] text-white overflow-hidden">
+        <main className="h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pb-20">
+            {/* Hero Section */}
+            <div className="relative py-3 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
-
-                {/* Decorative Blurs */}
-                <div className="absolute inset-0">
-                    <div className="absolute top-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-10 right-10 w-36 h-36 bg-cyan-300/10 rounded-full blur-2xl"></div>
-                </div>
 
                 {/* Main Content */}
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                        <MessageCircle className="w-6 h-6 text-cyan-300" />
-                        <span className="text-cyan-300 font-medium text-xs uppercase tracking-wide">Get in Touch</span>
-                    </div>
-
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                         About Us
                     </h1>
 
                     <p className="text-base text-blue-100 max-w-xl mx-auto leading-relaxed">
-                        Ready to transform your business? We're here to help you every step of the way.
+                        Welcome to Compact Softwares & Services
                     </p>
                 </div>
             </div>
 
             <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start pt-10">
-
                 {/* Image Carousel */}
                 <div className="w-full h-72 sm:h-96 md:h-[30rem] lg:h-[34rem] overflow-hidden rounded-xl shadow-lg">
                     <div

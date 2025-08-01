@@ -181,23 +181,12 @@ export default function ContactUsPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
             {/* Hero Section */}
-            <div className="relative py-6 px-4 text-center bg-[#09356C] text-white overflow-hidden">
+            <div className="relative py-3 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
-
-                {/* Decorative Blurs */}
-                <div className="absolute inset-0">
-                    <div className="absolute top-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-10 right-10 w-36 h-36 bg-cyan-300/10 rounded-full blur-2xl"></div>
-                </div>
 
                 {/* Main Content */}
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <div className="inline-flex items-center gap-2 mb-4">
-                        <MessageCircle className="w-6 h-6 text-cyan-300" />
-                        <span className="text-cyan-300 font-medium text-xs uppercase tracking-wide">Get in Touch</span>
-                    </div>
-
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                         Contact Us
                     </h1>
 
@@ -207,13 +196,12 @@ export default function ContactUsPage() {
                 </div>
             </div>
 
-
             <div className="max-w-7xl mx-auto px-4 py-16">
                 <div className="grid-cols-1 gap-12">
-
                     {/* Contact Form */}
-                    <div className="col-span-1">
-                        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20">
+                    <div className="w-full max-w-4xl mx-auto px-4">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-white/20">
+
                             <div className="mb-8">
                                 <h2 className="text-3xl font-bold text-gray-800 mb-3">Send us a Message</h2>
                                 <p className="text-gray-600">Fill out the form below and we'll respond via WhatsApp</p>
@@ -311,7 +299,7 @@ export default function ContactUsPage() {
                                     <textarea
                                         name="message"
                                         placeholder="Your Message"
-                                        rows={5}
+                                        rows={1}
                                         className={`w-full pl-12 pr-4 py-4 rounded-2xl border-2 transition-all duration-300 focus:outline-none bg-white/50 resize-none text-black placeholder-gray-500 ${focusedField === 'message'
                                             ? 'border-blue-500 bg-white shadow-lg'
                                             : 'border-gray-200 hover:border-gray-300'
@@ -334,7 +322,7 @@ export default function ContactUsPage() {
                                     <label className="text-sm font-medium text-gray-700">Security Verification</label>
 
                                     {/* Captcha Display */}
-                                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl border">
+                                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-2 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl border">
                                         {/* Left Section: Captcha Info */}
                                         <div className="flex flex-wrap items-center gap-3">
                                             <Shield className="w-5 h-5 text-gray-600 shrink-0" />

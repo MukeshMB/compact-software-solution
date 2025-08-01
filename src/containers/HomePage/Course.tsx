@@ -47,7 +47,7 @@ export default function Course() {
                             href="https://wa.me/919667337837?text=Hi%20Compact%20Softwares,%20I%20need%20more%20info%20about%20the%20courses"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block bg-[#00AA3E] text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#009237] transition-all duration-300"
+                            className="bouncing-button inline-block bg-[#00AA3E] text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#009237] transition-all duration-300"
                         >
                             Enquiry
                         </Link>
