@@ -43,8 +43,8 @@ export default function Hero() {
     // style={{ backgroundImage: 'url("/images/bg.png")' }}
 
     return (
-        <section id='home' className="w-full relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-[#09356C]" style={{ backgroundImage: 'url("/images/banner3.jpg")' }}>
-            <div className="absolute inset-0" />
+        <section id='home' className="w-full pt-20 relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-[#09356C]" style={{ backgroundImage: 'url("/images/banner3.jpg")' }}>
+            <div className="absolute inset-0 bg-black/30 z-0" />
 
             <div className="relative z-10 container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
                 {/* Text */}

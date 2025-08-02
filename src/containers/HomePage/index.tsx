@@ -12,17 +12,17 @@ import StatsBanner from './Stats';
 
 export default function HomePage() {
     return (
-        <div className="relative min-h-screen">
+        <div className="min-h-screen">
             <HeroSection />
-            <AboutUs />
-            <StatsBanner />
             <Services />
-            <BusyCloud />
+            <StatsBanner />
             <PricingSection />
+            <BusyCloud />
+            <Course />
             <BusyMobileApp />
             <BusyRecomSection />
-            <Course />
             <Partner />
+            <AboutUs />
             <FloatingActionButtons />
         </div>
     );

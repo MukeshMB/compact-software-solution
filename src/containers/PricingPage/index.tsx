@@ -130,7 +130,7 @@ export default function PricingPage() {
             className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pb-50"
         >
             {/* Hero Section */}
-            <div className="relative py-3 px-4 text-center bg-[#09356C] text-white overflow-hidden">
+            <div className="relative pt-20 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
 
                 {/* Main Content */}
