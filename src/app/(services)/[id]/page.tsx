@@ -26,11 +26,11 @@ export default function DynamicPage({ params }: PageProps) {
                 <div className="relative pt-20 px-4 text-center bg-[#09356C] text-white overflow-hidden">
                     <div className="absolute inset-0 bg-black/20"></div>
 
-                    <div className="relative z-10 max-w-3xl mx-auto">
+                    <div className="relative z-10 max-w-5xl mx-auto">
                         <h1 className="text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
                             {pageData.heading}
                         </h1>
-                        <p className="text-base text-blue-100 max-w-xl mx-auto leading-relaxed">
+                        <p className="text-base text-blue-100 max-w-5xl mx-auto leading-relaxed pb-1">
                             {pageData.description}
                         </p>
                     </div>
@@ -38,12 +38,12 @@ export default function DynamicPage({ params }: PageProps) {
 
                 <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start pt-10 max-w-7xl">
                     {/* Image Carousel Section */}
-                    <div className="w-full overflow-hidden rounded-xl shadow-lg">
+                    <div className="w-full overflow-hidden transform hover:scale-105">
                         <div className="flex w-full overflow-x-auto scroll-smooth scrollbar-hide gap-4">
                             {pageData.images.map((src, idx) => (
                                 <div
                                     key={idx}
-                                    className="flex-shrink-0 max-w-[700px] max-h-[500px] w-full relative rounded-xl overflow-hidden border"
+                                    className="flex-shrink-0 max-w-[700px] max-h-[500px] w-full relative overflow-hidden"
                                 >
                                     <Image
                                         src={src}
@@ -83,15 +83,6 @@ export default function DynamicPage({ params }: PageProps) {
                                 ))}
                             </ul>
                         ) : null}
-
-                        <div className="mt-8">
-                            <Link
-                                href="#contacts"
-                                className="inline-block bg-[#00AA3E] text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#009237] transition-all duration-300"
-                            >
-                                Learn More
-                            </Link>
-                        </div>
                     </div>
                 </div>
 
