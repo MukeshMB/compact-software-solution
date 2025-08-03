@@ -53,6 +53,30 @@ const primaryServices = [
         desc: "Enhance BUSY with smart modules like Payment Reminders, WhatsApp Integration, Kart Manager, and more.",
         icon: "⚙️",
         href: "/busy-addons"
+    },
+    {
+        title: "Kart Manager – E-Commerce Integration",
+        desc: "Sync your online store with BUSY for seamless order, inventory, and return management.",
+        icon: "📦",
+        href: "/kart-manager"
+    },
+    {
+        title: "BowBi – Business Intelligence",
+        desc: "Generate AI-powered reports 10X faster with smart dashboards and real-time insights.",
+        icon: "📈",
+        href: "/bowbi"
+    },
+    {
+        title: "Google Sheets Integration",
+        desc: "Export 50+ BUSY reports to Google Sheets automatically with filter-based syncing.",
+        icon: "📝",
+        href: "/google-sheets-integration"
+    },
+    {
+        title: "Sales Force Automation",
+        desc: "Empower your field sales team with order apps, route planning, and sales tracking integrated with BUSY.",
+        icon: "🚶‍♂️",
+        href: "/sales-force"
     }
 ];
 
@@ -88,6 +112,7 @@ const secondaryServices = [
         href: "/busy-academy"
     }
 ];
+
 
 const navLinks = [
     { name: 'Home', href: '/' },

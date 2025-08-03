@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CheckCircle } from "lucide-react";
 import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
+import AutoScrollCarousel from "./AutoScrollCarousel";
 
 
 export default async function DynamicPage({ params }: any) {
@@ -31,26 +32,9 @@ export default async function DynamicPage({ params }: any) {
                     </div>
                 </div>
 
-                <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start pt-10 max-w-7xl">
+                <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-10 max-w-7xl">
                     {/* Image Carousel Section */}
-                    <div className="w-full overflow-hidden transform hover:scale-105">
-                        <div className="flex w-full overflow-x-auto scroll-smooth scrollbar-hide gap-4">
-                            {pageData.images.map((src, idx) => (
-                                <div
-                                    key={idx}
-                                    className="flex-shrink-0 max-w-[700px] max-h-[500px] w-full relative overflow-hidden"
-                                >
-                                    <Image
-                                        src={src}
-                                        alt={`${pageData.heading} image ${idx + 1}`}
-                                        width={800}
-                                        height={500}
-                                        className="w-full h-auto max-h-[500px] object-contain rounded-xl"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                   <AutoScrollCarousel pageData={pageData} />
 
 
                     {/* Text Section */}

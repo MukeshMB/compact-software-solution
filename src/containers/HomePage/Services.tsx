@@ -1,6 +1,7 @@
 'use client';
 
 import { X, GraduationCap, Trophy, ChevronDown, User, Users, Phone, CreditCard, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -15,77 +16,92 @@ export default function Services() {
         {
             title: "BUSY Sales & Customization",
             desc: "From sales to setup, we provide full implementation, training, and custom module development for BUSY.",
-            icon: "📊"
+            icon: "📊",
+            href: "/busy-sales"
         },
         {
             title: "Production ERP Solutions",
             desc: "Optimize manufacturing & inventory with our tailor-made Production ERP systems.",
-            icon: "🏭"
+            icon: "🏭",
+            href: "/production-erp"
         },
         {
             title: "BUSY on Cloud",
             desc: "Access your BUSY data securely from anywhere with our cloud-hosted platform.",
-            icon: "☁️"
+            icon: "☁️",
+            href: "/busy-cloud"
         },
         {
             title: "Payroll Management",
             desc: "Automate salaries, taxes, and compliance using our intuitive payroll software.",
-            icon: "💼"
+            icon: "💼",
+            href: "/payroll"
         },
         {
             title: "POS & Barcode Billing",
             desc: "Speed up sales with barcode-enabled billing systems, ideal for retail & warehouses.",
-            icon: "🧾"
+            icon: "🧾",
+            href: "/pos"
         },
         {
             title: "Mobile Applications",
             desc: "Stay connected on-the-go with mobile solutions for reporting, sales, and approvals.",
-            icon: "📱"
+            icon: "📱",
+            href: "/mobile-apps"
         },
         {
             title: "E-Commerce Software",
             desc: "Run and manage your online store with integrated inventory, billing & dispatch modules.",
-            icon: "🛒"
+            icon: "🛒",
+            href: "/ecommerce"
         },
         {
             title: "BUSY Add-ons & Automation",
             desc: "Enhance BUSY with smart modules like Payment Reminders, WhatsApp Integration, Kart Manager, and more.",
-            icon: "⚙️"
+            icon: "⚙️",
+            href: "/busy-addons"
         }
     ];
+
 
     const secondaryServices = [
         {
             title: "Database Hosting",
             icon: "🗄️",
             desc: "Secure and scalable database hosting tailored to BUSY and ERP applications.",
-            bg: "bg-yellow-50"
+            bg: "bg-yellow-50",
+            href: "/database-hosting"
         },
         {
             title: "Data Recovery",
             icon: "💾",
             desc: "Recover critical business data with our expert-level data recovery services.",
-            bg: "bg-red-50"
+            bg: "bg-red-50",
+            href: "/data-recovery"
         },
         {
             title: "Remote Desktop Services",
             icon: "🖥️",
             desc: "Access your business applications and data remotely with secure RDP setup.",
-            bg: "bg-blue-50"
+            bg: "bg-blue-50",
+            href: "/rdp"
         },
         {
             title: "Antivirus Solutions",
             icon: "🛡️",
             desc: "Protect your systems with enterprise-grade antivirus and endpoint protection.",
-            bg: "bg-green-50"
+            bg: "bg-green-50",
+            href: "/antivirus"
         },
         {
             title: "Busy Academy – Training Center",
             icon: "🎓",
             desc: "Certified training programs on BUSY Accounting Software for professionals & staff.",
-            bg: "bg-purple-50"
+            bg: "bg-purple-50",
+            href: "/busy-academy"
         }
     ];
+
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | null>(null);
@@ -181,13 +197,13 @@ ${formData.studentName || 'Client'}
                             <div className="text-4xl mb-4">{service.icon}</div>
                             <h3 className="text-lg font-semibold">{service.title}</h3>
                             <p className="text-gray-400 hover:text-gray-400 text-sm mt-2">{service.desc}</p>
-                            <button
-                                onClick={() => handleExploreCategory(service)}
-                                className="flex items-center text-green-600 font-medium transition-colors cursor-pointer mt-3"
+                            <Link
+                                href={service.href}
+                                className="flex items-center text-blue-600 font-medium transition-colors cursor-pointer mt-3"
                             >
-                                Discuss
+                                Learn More
                                 <ChevronRight className="w-4 h-4 ml-1" />
-                            </button>
+                            </Link>
                         </div>
                     ))}
                 </div>
