@@ -4,7 +4,7 @@ import AboutUsPage from "@/containers/About"; // Assuming you have an About cont
 import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 
 export const metadata = {
-    title: "About Us | Compact Softwares",
+    title: "About Us | Compact Softwares & Services",
     description:
         "💼 Learn more about CSSBusy – a leading provider of professional training, business solutions, and GST software. Discover our journey, values, and mission to empower businesses across India.",
     keywords: [

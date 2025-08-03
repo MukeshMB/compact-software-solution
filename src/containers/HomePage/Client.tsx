@@ -44,7 +44,7 @@ export default function Clients() {
         return () => clearInterval(interval);
     }, []);
 
-    const allLogos = [...clientLogos, ...clientLogos]; // duplicated for loop illusion
+    const allLogos = [...clientLogos]; // duplicated for loop illusion
     const totalWidth = allLogos.length * cardWidth;
     const translateX = -(index * cardWidth) % totalWidth;
 

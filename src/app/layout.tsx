@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     "BUSY perpetual plans",
     "BUSY mobile app features",
     "Authorized BUSY training center",
-    "Compact software solutions",
+    "Compact software & services",
     "Accounting software for businesses",
     "BUSY software reseller",
     "BUSY software dealer Rohini",

@@ -53,7 +53,7 @@ export default function BusyMobileAppFeatures() {
 
     return (
         <section className="relative w-full py-16 bg-[#09356C] text-white overflow-hidden">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
                 {/* Header */}
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
@@ -86,12 +86,12 @@ export default function BusyMobileAppFeatures() {
 
                     {/* Phone Image */}
                     <div className="w-full flex justify-center lg:justify-end">
-                        <div className="relative w-[220px] h-[440px] sm:w-[260px] sm:h-[520px]">
+                        <div className="group relative w-[300px] h-[440px] sm:w-[350px] sm:h-[520px] transition-transform duration-300 hover:scale-110">
                             <Image
                                 src="/images/phone.png" // Replace with actual image
                                 alt="BUSY App Mobile UI"
                                 fill
-                                className="object-fit"
+                                className="object-contain rounded-xl"
                             />
                         </div>
                     </div>

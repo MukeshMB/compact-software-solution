@@ -51,7 +51,7 @@ export default function BusyCloud({ imageUrl }: BusyCloudProps) {
                     >
                         <div className="relative group bg-gradient-to-br from-[#0ea5e9]/10 via-[#1e3a8a]/10 to-[#0ea5e9]/5 p-6 rounded-2xl shadow-xl backdrop-blur-md hover:scale-105 transition-transform duration-300">
                             <Image
-                                src={imageUrl || "/images/cloud.jpg"}
+                                src={imageUrl || "/images/cloud.png"}
                                 alt="Cloud Illustration"
                                 width={500}
                                 height={500}

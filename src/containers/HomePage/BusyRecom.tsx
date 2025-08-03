@@ -10,6 +10,7 @@ import {
     BarChart3,
     ShoppingCart
 } from 'lucide-react';
+import Image from "next/image";
 
 const BusyRecomFeatures = () => {
     const features = [
@@ -100,8 +101,6 @@ const BusyRecomFeatures = () => {
                         </div>
                     </div>
                 </div>
-
-
 
                 {/* Core Features Title */}
                 <h3 className="text-2xl font-semibold text-center text-blue-900 mb-12 tracking-tight">

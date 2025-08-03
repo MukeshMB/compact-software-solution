@@ -106,7 +106,7 @@ export default function Services() {
     };
 
     const generateWhatsAppMessage = () => {
-        const message = `🧾 *Service Enquiry – Compact Software Solutions* 🧾
+        const message = `🧾 *Service Enquiry – Compact Software & Services* 🧾
 
 🔹 *Service Requested:*
 • ${formData.serviceName || 'Not specified'}

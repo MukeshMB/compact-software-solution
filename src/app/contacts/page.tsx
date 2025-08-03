@@ -4,7 +4,7 @@ import ContactUsPage from "@/containers/Contacts";
 import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 
 export const metadata = {
-    title: "Contact Us | Compact Softwares",
+    title: "Contact Us | Compact Softwares & Services",
     description: "📞 Reach out to CSSBusy for inquiries, support, or partnership opportunities. We're here to assist you with training, software, and business services. Visit us or send us a message today!",
     keywords: [
         "CSSBusy contact",

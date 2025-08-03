@@ -4,7 +4,7 @@ import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 import PricingPage from "@/containers/PricingPage";
 
 export const metadata = {
-    title: "Pricing | BUSY Software Plans | Compact Softwares",
+    title: "Pricing | BUSY Software Plans | Compact Softwares & Services",
     description: "💼 Explore BUSY Software's perpetual and subscription pricing plans. Choose from BASIC, STANDARD, ENTERPRISE or BLUE, SAFFRON, EMERALD with features like GST, inventory, job work, payroll, and more.",
     keywords: [
         "BUSY software pricing",
@@ -15,7 +15,7 @@ export const metadata = {
         "buy BUSY software",
         "BUSY enterprise plan",
         "BUSY software deals",
-        "Compact Softwares BUSY pricing"
+        "Compact Softwares & Services BUSY pricing"
     ],
     openGraph: {
         title: "Pricing | BUSY Software Plans",

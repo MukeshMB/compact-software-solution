@@ -28,7 +28,7 @@ const Footer = () => {
                                     </p>
                                 </div>
                                 <div className="lg:ml-8">
-                                    <Link href="/contacts" className="inline-block bg-[#10b981] hover:bg-[#059669] text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                                    <Link href="/contacts" className="animate-bounce inline-block bg-[#10b981] hover:bg-[#059669] text-white px-12 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                                         Contact Us
                                     </Link>
                                 </div>
@@ -38,16 +38,16 @@ const Footer = () => {
                 </div>
 
                 {/* 2. Information Section - Glassmorphic Cards */}
-                <div className="relative -mt-16 px-6 pb-16">
+                <div className="relative -mt-16 px-6">
                     <div className="max-w-6xl mx-auto">
 
                         {/* Company Info and Contact Cards */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-5">
 
                             {/* Company Info Card */}
                             <div className="lg:col-span-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl">
                                 <h3 className="text-2xl font-bold text-white mb-4">
-                                    Compact Software & Solution
+                                    Compact Software & Services
                                 </h3>
                                 <p className="text-white/90 text-base leading-relaxed">
                                     Empowering businesses with intelligent accounting, GST training, and enterprise automation solutions across Delhi NCR.
@@ -135,7 +135,7 @@ const Footer = () => {
                 </div>
 
                 {/* 3. Bottom Navigation & Branding */}
-                <div className="border-t border-white/20 px-6 py-12">
+                <div className="border-t border-white/20 px-6 py-1">
                     <div className="max-w-6xl mx-auto">
 
                         {/* Horizontal Navigation Links */}
@@ -163,7 +163,7 @@ const Footer = () => {
                         {/* Copyright - Center aligned */}
                         <div className="text-center mb-8">
                             <p className="text-gray-300 text-base">
-                                © 2025 Compact Software & Solution. All rights reserved.
+                                © 2025 Compact Software & Services. All rights reserved.
                             </p>
                         </div>
 
