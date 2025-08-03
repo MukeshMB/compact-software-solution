@@ -1,20 +1,15 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { dynamicPages } from "@/constants/services";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CheckCircle } from "lucide-react";
 import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 
-interface PageProps {
-    params: {
-        id: string;
-    };
-}
 
-export default function DynamicPage({ params }: PageProps) {
-    const pageData = dynamicPages.find((page) => page.id === params.id);
+export default async function DynamicPage({ params }: any) {
+    const { id } = await params;
+    const pageData = dynamicPages.find((page) => page.id === id);
     if (!pageData) return notFound();
 
     return (
