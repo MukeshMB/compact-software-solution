@@ -44,7 +44,7 @@ export default function Services() {
             href: "/pos"
         },
         {
-            title: "Mobile Applications",
+            title: "BUSY MOBILE APP",
             desc: "Stay connected on-the-go with mobile solutions for reporting, sales, and approvals.",
             icon: "📱",
             href: "/mobile-apps"

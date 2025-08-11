@@ -67,10 +67,10 @@ const primaryServices = [
         href: "/bowbi"
     },
     {
-        title: "Google Sheets Integration",
+        title: "Busy to Google",
         desc: "Export 50+ BUSY reports to Google Sheets automatically with filter-based syncing.",
         icon: "📝",
-        href: "/google-sheets-integration"
+        href: "/busy-to-google"
     },
     {
         title: "Sales Force Automation",
@@ -202,9 +202,20 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
                         {/* Right */}
                         <div className="flex items-center space-x-4">
-                            <div className="hidden sm:block">
-                                <Image src="/icons/brand.jpg" alt="Brand Logo" width={120} height={70} className="object-contain" />
-                            </div>
+                            <Link
+                                href="https://busy.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden sm:block"
+                            >
+                                <Image
+                                    src="/icons/brand.jpg"
+                                    alt="Brand Logo"
+                                    width={120}
+                                    height={70}
+                                    className="object-contain"
+                                />
+                            </Link>
 
                             {/* Mobile Toggle */}
                             <div className="lg:hidden">

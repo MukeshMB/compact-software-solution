@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { dynamicPages } from "@/constants/services";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CheckCircle } from "lucide-react";
 import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 import AutoScrollCarousel from "./AutoScrollCarousel";
+import PageHeading from "./AutoScrollHeading";
+import PageDescription from "./AutoScrollDescription";
 
 
 export default async function DynamicPage({ params }: any) {
@@ -34,7 +35,7 @@ export default async function DynamicPage({ params }: any) {
 
                 <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-10 max-w-7xl">
                     {/* Image Carousel Section */}
-                   <AutoScrollCarousel pageData={pageData} />
+                    <AutoScrollCarousel pageData={pageData} />
 
 
                     {/* Text Section */}
@@ -43,14 +44,10 @@ export default async function DynamicPage({ params }: any) {
                             <span className="text-[#00AA3E] text-sm font-bold uppercase tracking-wide block">
                                 {pageData.heading}
                             </span>
-                            <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent tracking-wide">
-                                {pageData.subheading || "Explore Our Service in Detail"}
-                            </h2>
+                            <PageHeading pageData={pageData} />
                         </div>
 
-                        <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-                            {pageData.description}
-                        </p>
+                        <PageDescription pageData={pageData} />
 
                         {pageData.points?.length ? (
                             <ul className="mt-6 space-y-3 text-sm sm:text-base text-gray-800">
