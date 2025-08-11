@@ -118,6 +118,7 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Job Portal', href: 'https://busy.in' },
     { name: 'Contacts', href: '/contacts' },
 ]
 
@@ -158,10 +159,16 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                     key={item.name}
                                     href={item.href}
                                     onClick={() => setActiveSection(item.name.toLowerCase())}
-                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:text-blue-500 ${activeSection === item.name.toLowerCase() ? 'text-blue-600 bg-blue-50 shadow-sm' : `${scrolled ? 'text-gray-700' : 'text-white'} hover:bg-gray-100`}`}
+                                    target={item.name === "Job Portal" ? "_blank" : undefined}
+                                    rel={item.name === "Job Portal" ? "noopener noreferrer" : undefined}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:text-blue-500 ${activeSection === item.name.toLowerCase()
+                                            ? "text-blue-600 bg-blue-50 shadow-sm"
+                                            : `${scrolled ? "text-gray-700" : "text-white"} hover:bg-gray-100`
+                                        }`}
                                 >
                                     {item.name}
                                 </Link>
+
                             ))}
 
                             {/* Services Dropdown */}
