@@ -142,7 +142,7 @@ export const dynamicPages = [
             // "Document Sharing & Sending",
             // "Loyalty Program Integration",
             // "Integrated with BUSY Accounting Software"
-        ] 
+        ]
     },
     {
         id: "kart-manager",
@@ -212,6 +212,280 @@ export const dynamicPages = [
             "Salesman Order Status & Ageing Receivables",
             "Fully Integrated with BUSY Accounting",
             "Ideal for Busy Customers, Brand Owners, Retailers, Traders & Distributors"
+        ],
+        useCases: [
+            "Busy Customer",
+            "Brand Owner",
+            "Retailer",
+            "Trader",
+            "Distributor"
         ]
-    }
+    },
+
+    // New Data Services
+    {
+        id: "excellent-dms",
+        heading: ["Excellent DMS"],
+        subheading: ["Digitalizing SME Ecosystem"],
+        description: ["Routewise  orders,  payment collection on the go using your smartphone. Real time tracking of your  sales activity."],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Distributor Management",
+            "Field Sales (SFA Mobile App)",
+            "Retailer Application",
+            "Van Sales",
+            "Salesman Order App",
+            "Salesman Tracking - Live location tracking",
+            "Attendance",
+            "GPS navigation",
+            "E-Catalogue",
+            "Salesman Target & Achievement",
+            "Salesmen Route/Beat planning",
+            "Scheme Management",
+            "Price List",
+            "Manage Secondary Sales with Excellent DMS",
+            "Automate TA/DA"
+        ],
+        useCases: [
+            "Household & Industrial Cleaning",
+            "Food & Culinary Products",
+            "Footwear & Accessories",
+            "Toys & Entertainment",
+            "Fragrance & Incense",
+            "Kitchen & Home Appliances",
+            "Fast-Moving Consumer Goods",
+            "Agricultural & Seed Products",
+            "FMCG"
+        ]
+    },
+    {
+        id: "excellent-kyc",
+        heading: ["Excellent KYC"],
+        subheading: ["Comprehensive KYC Management Solution"],
+        description: [],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Multi-Entity KYC Management",
+            "Customizable Document Requirements",
+            "Digital Upload & Validation Interface",
+            "Admin Verification Dashboard",
+            "Secure & Compliant"
+        ]
+    },
+    {
+        id: "jobs-ba",
+        heading: ["JobsBA"],
+        subheading: ["Specialized Job Portal for Accounting Professionals"],
+        description: [""],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Job Listings",
+            "Employer Dashboard",
+            "Job Seeker Dashboard"
+        ],
+        useCases: [
+            "Accounting Professionals",
+            "Employers",
+            "Freelancers",
+            "Accounting Firms"
+        ]
+    },
+    {
+        id: "excellent-commerce",
+        heading: ["Excellent Commerce"],
+        subheading: ["Your All-in-One Platform for Digital Storefront  & Customer Experience Management"],
+        description: [],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Product Management",
+            "Order & Return Management",
+            "Customer Management",
+            "Customer Feedback & Reviews",
+            "Pricing & Promotions Engine",
+            "Busy Software Integration",
+            "Reports & Analytics"
+        ]
+    },
+    {
+        id: "atithi",
+        heading: ["Atithi"],
+        subheading: ["Comprehensive Catering Software Solution"],
+        description: ["BUSY INTEGRATED-1.png"],
+        images: ["/images/busy-integrated-1.png"],
+        points: [
+            "Catering Service Providers",
+            "Multi-Location Catering Companies",
+            "Event Planners & Catering Managers",
+            "Food Service & Hospitality Industry"
+        ]
+    },
+    {
+        id: "attacho",
+        heading: ["attacho"],
+        subheading: ["Document Attachment Solution for Busy"],
+        description: ["BUSY INTEGRATED-1.png", "We've created a mobile app add-on for Busy software that allows you to attach images to all transactions in your Busy software."],
+        images: ["/images/busy-integrated-1.png"],
+        points: [
+            "Image Attachments",
+            "PDF Support",
+            "Mobile Accessibility",
+            "Seamless Integration"
+        ],
+        useCases: [
+            "Accounting Teams",
+            "Business Owners",
+            "Auditors",
+            "Field Staff"
+        ]
+    },
+    {
+        id: "ordering-automation",
+        heading: ["Ordering Automation"],
+        subheading: ["Live Stock Blocking Solution for Garment Wholesalers"],
+        description: ["BUSY INTEGRATED-1.png"],
+        images: ["/images/busy-integrated-1.png"],
+        points: [
+            "Order Placement",
+            "Stock Blocking",
+            "Stakeholder Communication",
+            "Warehouse Processing",
+            "Dispatch Management"
+        ],
+        useCases: [
+            "Garment Wholesalers",
+            "Textile Distributors",
+            "Fashion Businesses",
+            "Multi – Channel  Retailers"
+        ]
+    },
+    {
+        id: "vendor-portal",
+        heading: ["Vendor Portal"],
+        subheading: ["Empowering Efficient Vendor Management"],
+        description: ["BUSY INTEGRATED-1.png"],
+        images: ["/images/busy-integrated-1.png"],
+        points: [
+            "Vendor Login",
+            "Outstanding Payments",
+            "Sale Order Management",
+            "Ledger",
+            "Stock Status",
+            "Sale Status",
+            "Barcode Generation"
+        ]
+    },
+    {
+        id: "invoice-generation-tool",
+        heading: ["Invoice Generation Tool"],
+        subheading: ["Invoice Generation Tool"],
+        description: [],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Attendance Based Invoicing",
+            "Meter Reading Based Invoicing",
+            "Periodic Based Invoicing",
+            "Contract Management",
+            "Log Book Maintenance",
+            "Recurring Invoicing",
+            "Rental Invoicing"
+        ]
+    },
+    {
+        id: "optical-addon",
+        heading: ["Optical Add-on"],
+        subheading: ["Specialized Solution for the Optical Industry"],
+        description: ["Use Case - Optical Add-on"],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Auto Order to PO",
+            "Lens - Wise Management",
+            "Lens – Wise Data",
+            "Lens Group - wise Order",
+            "MRN Lens – Wise"
+        ],
+        useCases: [
+            "Optical Retailers",
+            "Lens Manufacturers / Importers /  Whole sellers"
+        ]
+    },
+    {
+        id: "audit-trail-scrub",
+        heading: ["Audit Trail Scrub"],
+        subheading: ["Audit Trail Maintenance"],
+        description: ["Use Case – Audit Trail Scrub"],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Data Log Scrubbing",
+            "Busy Software Integration",
+            "Hassle - Free Compliance",
+            "Secure & Traceable Logs",
+            "Regulatory Reporting Support"
+        ],
+        useCases: [
+            "SMEs & Enterprises",
+            "Accountants & Auditors",
+            "Compliance Officers",
+            "CA Firms",
+            "Regulated Industries"
+        ]
+    },
+    {
+        id: "mini-aadhat",
+        heading: ["Mini Aadhat"],
+        subheading: ["Add - On Features"],
+        description: ["Busy Integrated"],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Sale / Purchase Order Booking",
+            "Direct Sale Module",
+            "Auto E-mail",
+            "Customer Supply Order Monitoring",
+            "Customers Gift",
+            "Interest Calculation Module",
+            "Order-wise Tracking",
+            "Direct Purchase Module",
+            "Order/Stock Management"
+        ],
+        mobileAppFeatures: [
+            "Order Booking",
+            "Customer Supply Order Monitoring",
+            "Pending Order Report",
+            "Outstanding Report"
+        ]
+    },
+    {
+        id: "excellent-feedback",
+        heading: ["Excellent Feedback"],
+        subheading: ["Smart Feedback Management System for Daily Operations & Events"],
+        description: ["Use Case - Excellent Feedback"],
+        images: ["/images/bg.jpg"],
+        points: [
+            "Event Feedback Collection",
+            "Daily Task Feedback (Templates)",
+            "Customer Feedback",
+            "Guest Feedback",
+            "Location - wise Feedback",
+            "Reports & Analytics"
+        ],
+        useCases: [
+            "Catering Services",
+            "Food Industries",
+            "Restaurants",
+            "Travel & Hospitality"
+        ]
+    },
+    {
+        id: "excellent-pms",
+        heading: ["Excellent PMS"],
+        subheading: ["All- in-One Platform for Task, Performance & Maintenance Management"],
+        description: [],
+        images: ["/images/bg.jpg"],
+        points: [
+            "SMEs & Enterprises",
+            "HR & Admin Teams",
+            "Operations &  Maintenance Managers",
+            "Project Managers",
+            "Facility Managers"
+        ]
+    },
 ];

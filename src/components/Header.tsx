@@ -7,12 +7,6 @@ import Link from "next/link";
 
 const primaryServices = [
     {
-        title: "BUSY Sales & Customization",
-        desc: "From sales to setup, we provide full implementation, training, and custom module development for BUSY.",
-        icon: "📊",
-        href: "/busy-sales"
-    },
-    {
         title: "Production ERP Solutions",
         desc: "Optimize manufacturing & inventory with our tailor-made Production ERP systems.",
         icon: "🏭",
@@ -31,22 +25,10 @@ const primaryServices = [
         href: "/payroll"
     },
     {
-        title: "POS & Barcode Billing",
-        desc: "Speed up sales with barcode-enabled billing systems, ideal for retail & warehouses.",
-        icon: "🧾",
-        href: "/pos"
-    },
-    {
         title: "Mobile Applications",
         desc: "Stay connected on-the-go with mobile solutions for reporting, sales, and approvals.",
         icon: "📱",
         href: "/mobile-apps"
-    },
-    {
-        title: "E-Commerce Software",
-        desc: "Run and manage your online store with integrated inventory, billing & dispatch modules.",
-        icon: "🛒",
-        href: "/ecommerce"
     },
     {
         title: "BUSY Add-ons & Automation",
@@ -82,35 +64,89 @@ const primaryServices = [
 
 const secondaryServices = [
     {
-        title: "Database Hosting",
-        icon: "🗄️",
-        desc: "Secure and scalable database hosting tailored to BUSY and ERP applications.",
-        href: "/database-hosting"
+        title: "Excellent DMS",
+        desc: "Manage distributors, retailers, sales teams, and secondary sales with GPS tracking and mobile order booking.",
+        icon: "📦",
+        href: "/excellent-dms"
     },
     {
-        title: "Data Recovery",
-        icon: "💾",
-        desc: "Recover critical business data with our expert-level data recovery services.",
-        href: "/data-recovery"
+        title: "Excellent KYC",
+        desc: "Complete multi-entity KYC with document uploads, admin verification, and compliance-ready processes.",
+        icon: "🪪",
+        href: "/excellent-kyc"
     },
     {
-        title: "Remote Desktop Services",
-        icon: "🖥️",
-        desc: "Access your business applications and data remotely with secure RDP setup.",
-        href: "/rdp"
+        title: "JobsBA",
+        desc: "Job portal tailored for accounting professionals, employers, and freelancers with dedicated dashboards.",
+        icon: "💼",
+        href: "/jobs-ba"
     },
     {
-        title: "Antivirus Solutions",
-        icon: "🛡️",
-        desc: "Protect your systems with enterprise-grade antivirus and endpoint protection.",
-        href: "/antivirus"
+        title: "Excellent Commerce",
+        desc: "All-in-one digital storefront with product, order, and customer management plus BUSY integration.",
+        icon: "🛒",
+        href: "/excellent-commerce"
     },
     {
-        title: "Busy Academy – Training Center",
-        icon: "🎓",
-        desc: "Certified training programs on BUSY Accounting Software for professionals & staff.",
-        href: "/busy-academy"
-    }
+        title: "Atithi Catering Software",
+        desc: "Catering and event management platform for service providers and multi-location operations.",
+        icon: "🍽️",
+        href: "/atithi"
+    },
+    {
+        title: "Attacho",
+        desc: "Attach images and PDFs to BUSY transactions via mobile with seamless integration.",
+        icon: "📎",
+        href: "/attacho"
+    },
+    {
+        title: "Ordering Automation",
+        desc: "Live stock blocking and order management for garment wholesalers and multi-channel retailers.",
+        icon: "👕",
+        href: "/ordering-automation"
+    },
+    {
+        title: "Vendor Portal",
+        desc: "Vendor login system with stock status, outstanding payments, and barcode generation.",
+        icon: "🏷️",
+        href: "/vendor-portal"
+    },
+    {
+        title: "Invoice Generation Tool",
+        desc: "Automated invoicing for attendance, meter reading, contracts, and recurring rentals.",
+        icon: "🧾",
+        href: "/invoice-generation-tool"
+    },
+    {
+        title: "Optical Add-on",
+        desc: "Specialized lens-wise order and inventory management for optical retailers and suppliers.",
+        icon: "👓",
+        href: "/optical-addon"
+    },
+    {
+        title: "Audit Trail Scrub",
+        desc: "Secure, traceable BUSY logs with compliance-friendly audit trail maintenance.",
+        icon: "🔍",
+        href: "/audit-trail-scrub"
+    },
+    {
+        title: "Mini Aadhat",
+        desc: "BUSY add-on with order booking, tracking, interest calculation, and mobile app features.",
+        icon: "📱",
+        href: "/mini-aadhat"
+    },
+    {
+        title: "Excellent Feedback",
+        desc: "Collect and analyze customer, guest, and event feedback with location-wise reporting.",
+        icon: "🗣️",
+        href: "/excellent-feedback"
+    },
+    {
+        title: "Excellent PMS",
+        desc: "Manage tasks, performance, and maintenance for SMEs, HR teams, and project managers.",
+        icon: "🛠️",
+        href: "/excellent-pms"
+    },
 ];
 
 
@@ -127,6 +163,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
     const [activeSection, setActiveSection] = useState(activePage);
     const [showMobileServices, setShowMobileServices] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -162,8 +199,8 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                     target={item.name === "Job Portal" ? "_blank" : undefined}
                                     rel={item.name === "Job Portal" ? "noopener noreferrer" : undefined}
                                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:text-blue-500 ${activeSection === item.name.toLowerCase()
-                                            ? "text-blue-600 bg-blue-50 shadow-sm"
-                                            : `${scrolled ? "text-gray-700" : "text-white"} hover:bg-gray-100`
+                                        ? "text-blue-600 bg-blue-50 shadow-sm"
+                                        : `${scrolled ? "text-gray-700" : "text-white"} hover:bg-gray-100`
                                         }`}
                                 >
                                     {item.name}
@@ -183,11 +220,11 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
                                 {/* Dropdown stays open on hover */}
                                 <div
-                                    className="invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 absolute left-0 top-full mt-2 w-[600px] bg-white rounded-xl shadow-xl border border-gray-200 z-50"
+                                    className="invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-[900px] bg-white rounded-xl shadow-xl border border-gray-200 z-50"
                                     onMouseEnter={(e) => e.currentTarget.classList.add("visible", "opacity-100", "scale-100")}
                                     onMouseLeave={(e) => e.currentTarget.classList.remove("visible", "opacity-100", "scale-100")}
                                 >
-                                    <div className="grid grid-cols-2 gap-4 p-4">
+                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4">
                                         {[...primaryServices, ...secondaryServices].map((s) => (
                                             <Link
                                                 key={s.title}
@@ -204,6 +241,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                     </div>
                                 </div>
                             </div>
+
 
                         </div>
 

@@ -59,6 +59,25 @@ export default async function DynamicPage({ params }: any) {
                                 ))}
                             </ul>
                         ) : null}
+
+                        {/* Use Case Section */}
+                        {pageData.useCases && (
+                            <div className="mt-6">
+                                <span className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
+                                    Use Case
+                                </span>
+                                {pageData.useCases?.length ? (
+                                    <ul className="mt-6 space-y-3 text-sm sm:text-base text-gray-800">
+                                        {pageData.useCases.map((point, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <CheckCircle className="w-5 h-5 text-blue-500 mt-1" />
+                                                <span>{point}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : null}
+                            </div>
+                        )}
                     </div>
                 </div>
 

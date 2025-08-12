@@ -234,9 +234,9 @@ ${formData.studentName || 'Client'}
                                         <p className="text-sm text-gray-400 hover:text-gray-400 leading-relaxed">{service.desc}</p>
                                         <button
                                             onClick={() => handleExploreCategory(service)}
-                                            className="flex items-center text-green-600 font-medium transition-colors cursor-pointer mt-2"
+                                            className="flex items-center text-blue-600 font-medium transition-colors cursor-pointer mt-2"
                                         >
-                                            Discuss
+                                            Learn More
                                             <ChevronRight className="w-4 h-4 ml-1" />
                                         </button>
                                     </div>
