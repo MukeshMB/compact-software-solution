@@ -39,13 +39,13 @@ const Footer = () => {
 
                 {/* 2. Information Section - Glassmorphic Cards */}
                 <div className="relative -mt-16 px-6">
-                    <div className="max-w-6xl mx-auto">
+                    <div className="max-w-8xl mx-10">
 
                         {/* Company Info and Contact Cards */}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-5">
 
                             {/* Company Info Card */}
-                            <div className="lg:col-span-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl">
+                            <div className="lg:col-span-1 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                                 <h3 className="text-2xl font-bold text-white mb-4">
                                     Compact Software & Services
                                 </h3>
@@ -55,7 +55,7 @@ const Footer = () => {
                             </div>
 
                             {/* Contact Info Card */}
-                            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl">
+                            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                                 <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                                     <div className="w-8 h-8 bg-[#10b981] rounded-full flex items-center justify-center">
                                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ const Footer = () => {
                                         </svg>
                                         <div className="text-white/90">
                                             <a href="tel:+917872727171" className="font-medium hover:text-[#10b981] transition-colors duration-300 block">+91-7872727171</a>
-                                            <a href="tel:+919810214216" className="font-medium hover:text-[#10b981] transition-colors duration-300 block">9810214216</a>
+                                            <a href="tel:+919810214216" className="font-medium hover:text-[#10b981] transition-colors duration-300 block">+91-9810214216</a>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3">
@@ -98,7 +98,7 @@ const Footer = () => {
                             </div>
 
                             {/* Branches Card */}
-                            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl">
+                            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 shadow-xl hover:scale-105">
                                 <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                                     <div className="w-8 h-8 bg-[#10b981] rounded-full flex items-center justify-center">
                                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +149,7 @@ const Footer = () => {
                             <Link href="/accounting" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">
                                 Accounting
                             </Link>
-                            <Link href="/gst-training" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">
+                            <Link href="/#training" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">
                                 GST Training
                             </Link>
                             <Link href="/automation" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">

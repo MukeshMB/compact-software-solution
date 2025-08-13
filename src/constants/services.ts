@@ -228,7 +228,7 @@ export const dynamicPages = [
         heading: ["Excellent DMS"],
         subheading: ["Digitalizing SME Ecosystem"],
         description: ["Routewise  orders,  payment collection on the go using your smartphone. Real time tracking of your  sales activity."],
-        images: ["/images/bg.jpg"],
+        images: ["/images/excellent-dms.jpg"],
         points: [
             "Distributor Management",
             "Field Sales (SFA Mobile App)",
@@ -263,7 +263,7 @@ export const dynamicPages = [
         heading: ["Excellent KYC"],
         subheading: ["Comprehensive KYC Management Solution"],
         description: [],
-        images: ["/images/bg.jpg"],
+        images: ["/images/excellent-kyc.jpg"],
         points: [
             "Multi-Entity KYC Management",
             "Customizable Document Requirements",
@@ -277,7 +277,7 @@ export const dynamicPages = [
         heading: ["JobsBA"],
         subheading: ["Specialized Job Portal for Accounting Professionals"],
         description: [""],
-        images: ["/images/bg.jpg"],
+        images: ["/images/jobsba.jpg"],
         points: [
             "Job Listings",
             "Employer Dashboard",
@@ -295,7 +295,7 @@ export const dynamicPages = [
         heading: ["Excellent Commerce"],
         subheading: ["Your All-in-One Platform for Digital Storefront  & Customer Experience Management"],
         description: [],
-        images: ["/images/bg.jpg"],
+        images: ["/images/excellent-commerce.jpg"],
         points: [
             "Product Management",
             "Order & Return Management",
@@ -311,7 +311,7 @@ export const dynamicPages = [
         heading: ["Atithi"],
         subheading: ["Comprehensive Catering Software Solution"],
         description: ["BUSY INTEGRATED-1.png"],
-        images: ["/images/busy-integrated-1.png"],
+        images: ["/images/erp3.png", "/images/atithi.jpg"],
         points: [
             "Catering Service Providers",
             "Multi-Location Catering Companies",
@@ -323,8 +323,8 @@ export const dynamicPages = [
         id: "attacho",
         heading: ["attacho"],
         subheading: ["Document Attachment Solution for Busy"],
-        description: ["BUSY INTEGRATED-1.png", "We've created a mobile app add-on for Busy software that allows you to attach images to all transactions in your Busy software."],
-        images: ["/images/busy-integrated-1.png"],
+        description: ["We've created a mobile app add-on for Busy software that allows you to attach images to all transactions in your Busy software."],
+        images: ["/images/attacho.jpg", "/images/erp3.png"],
         points: [
             "Image Attachments",
             "PDF Support",
@@ -342,8 +342,8 @@ export const dynamicPages = [
         id: "ordering-automation",
         heading: ["Ordering Automation"],
         subheading: ["Live Stock Blocking Solution for Garment Wholesalers"],
-        description: ["BUSY INTEGRATED-1.png"],
-        images: ["/images/busy-integrated-1.png"],
+        description: [],
+        images: ["/images/ordering-automation.jpg", "/images/erp3.png"],
         points: [
             "Order Placement",
             "Stock Blocking",
@@ -362,8 +362,8 @@ export const dynamicPages = [
         id: "vendor-portal",
         heading: ["Vendor Portal"],
         subheading: ["Empowering Efficient Vendor Management"],
-        description: ["BUSY INTEGRATED-1.png"],
-        images: ["/images/busy-integrated-1.png"],
+        description: [],
+        images: ["/images/vendor-portal.jpg", "/images/erp3.png"],
         points: [
             "Vendor Login",
             "Outstanding Payments",
@@ -379,7 +379,7 @@ export const dynamicPages = [
         heading: ["Invoice Generation Tool"],
         subheading: ["Invoice Generation Tool"],
         description: [],
-        images: ["/images/bg.jpg"],
+        images: ["/images/invoice-generation.jpg"],
         points: [
             "Attendance Based Invoicing",
             "Meter Reading Based Invoicing",
@@ -395,7 +395,7 @@ export const dynamicPages = [
         heading: ["Optical Add-on"],
         subheading: ["Specialized Solution for the Optical Industry"],
         description: ["Use Case - Optical Add-on"],
-        images: ["/images/bg.jpg"],
+        images: ["/images/optical-add-on.jpg"],
         points: [
             "Auto Order to PO",
             "Lens - Wise Management",
@@ -413,7 +413,7 @@ export const dynamicPages = [
         heading: ["Audit Trail Scrub"],
         subheading: ["Audit Trail Maintenance"],
         description: ["Use Case – Audit Trail Scrub"],
-        images: ["/images/bg.jpg"],
+        images: ["/images/audit-trial.jpg"],
         points: [
             "Data Log Scrubbing",
             "Busy Software Integration",
@@ -434,7 +434,7 @@ export const dynamicPages = [
         heading: ["Mini Aadhat"],
         subheading: ["Add - On Features"],
         description: ["Busy Integrated"],
-        images: ["/images/bg.jpg"],
+        images: ["/images/aadhat.jpg"],
         points: [
             "Sale / Purchase Order Booking",
             "Direct Sale Module",
@@ -458,7 +458,7 @@ export const dynamicPages = [
         heading: ["Excellent Feedback"],
         subheading: ["Smart Feedback Management System for Daily Operations & Events"],
         description: ["Use Case - Excellent Feedback"],
-        images: ["/images/bg.jpg"],
+        images: ["/images/excellent-feedback.jpg"],
         points: [
             "Event Feedback Collection",
             "Daily Task Feedback (Templates)",
@@ -479,7 +479,7 @@ export const dynamicPages = [
         heading: ["Excellent PMS"],
         subheading: ["All- in-One Platform for Task, Performance & Maintenance Management"],
         description: [],
-        images: ["/images/bg.jpg"],
+        images: ["/images/excellent-pms.jpg"],
         points: [
             "SMEs & Enterprises",
             "HR & Admin Teams",

@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     siteName: 'Compact Softwares & Services',
     images: [
       {
-        url: '/opengraph-css.png',
+        url: '/icons/logo.png',
         width: 1200,
         height: 630,
         alt: 'Compact Softwares & Services – Trusted IT Partner',
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     description:
       "29+ years of excellence in providing BUSY ERP, Payroll, Cloud Services, POS & Training to 25,000+ clients. Compact Softwares – Your Business IT Partner.",
     creator: '@cssbusy',
-    images: ['/opengraph-css.png'],
+    images: ['/icons/logo.png'],
   },
   robots: {
     index: true,

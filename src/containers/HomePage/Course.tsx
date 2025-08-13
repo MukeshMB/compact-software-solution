@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Course() {
     return (
-        <section className="relative py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/course-banner.png")' }}>
+        <section id="training" className="relative py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/course-banner.png")' }}>
             <div className="absolute inset-0 bg-black/30 z-0" />
             <div className="max-w-8xl mx-auto px-6 flex flex-col lg:flex-row items-top justify-between gap-10">
 

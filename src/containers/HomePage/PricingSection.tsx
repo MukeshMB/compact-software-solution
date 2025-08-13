@@ -84,7 +84,11 @@ const subscriptionPlans = [
 
 const PlanCard = ({ plan, index }: any) => (
   <div
-    className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform ${plan.popular ? "scale-113  hover:scale-115" : " hover:scale-105"}`}
+    className={`relative w-full sm:w-[300px] p-[2px] rounded-2xl transition-transform duration-300 transform 
+      ${plan.popular 
+        ? "sm:scale-[1.13] sm:hover:scale-[1.15]" 
+        : "sm:hover:scale-[1.05]"
+      }`}
     style={{ animationDelay: `${index * 150}ms` }}
   >
     <div

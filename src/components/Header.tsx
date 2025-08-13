@@ -220,11 +220,11 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
                                 {/* Dropdown stays open on hover */}
                                 <div
-                                    className="invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-[900px] bg-white rounded-xl shadow-xl border border-gray-200 z-50"
+                                    className="invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[95vw] max-w-[1000px] bg-white rounded-xl shadow-xl border border-gray-200 z-50"
                                     onMouseEnter={(e) => e.currentTarget.classList.add("visible", "opacity-100", "scale-100")}
                                     onMouseLeave={(e) => e.currentTarget.classList.remove("visible", "opacity-100", "scale-100")}
                                 >
-                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4">
+                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                                         {[...primaryServices, ...secondaryServices].map((s) => (
                                             <Link
                                                 key={s.title}

@@ -14,91 +14,154 @@ type ServiceCategory = {
 export default function Services() {
     const primaryServices = [
         {
-            title: "BUSY Sales & Customization",
-            desc: "From sales to setup, we provide full implementation, training, and custom module development for BUSY.",
-            icon: "📊",
-            href: "/busy-sales"
-        },
-        {
             title: "Production ERP Solutions",
-            desc: "Optimize manufacturing & inventory with our tailor-made Production ERP systems.",
+            desc: "Optimize your production workflow with BUSY’s ERP suite for efficiency and accuracy.",
             icon: "🏭",
             href: "/production-erp"
         },
         {
             title: "BUSY on Cloud",
-            desc: "Access your BUSY data securely from anywhere with our cloud-hosted platform.",
+            desc: "Access, manage, and grow your business from anywhere with BUSY Cloud.",
             icon: "☁️",
             href: "/busy-cloud"
         },
         {
             title: "Payroll Management",
-            desc: "Automate salaries, taxes, and compliance using our intuitive payroll software.",
+            desc: "Automate payroll operations, compliance, and employee communication with BUSY’s Payroll solution.",
             icon: "💼",
             href: "/payroll"
         },
         {
             title: "POS & Barcode Billing",
-            desc: "Speed up sales with barcode-enabled billing systems, ideal for retail & warehouses.",
+            desc: "Speed up sales with barcode-enabled billing systems for retail & warehouses.",
             icon: "🧾",
             href: "/pos"
         },
         {
-            title: "BUSY MOBILE APP",
-            desc: "Stay connected on-the-go with mobile solutions for reporting, sales, and approvals.",
+            title: "BUSY Mobile App",
+            desc: "Manage your business anytime, anywhere with the faster BUSY Mobile App.",
             icon: "📱",
             href: "/mobile-apps"
         },
         {
             title: "E-Commerce Software",
-            desc: "Run and manage your online store with integrated inventory, billing & dispatch modules.",
+            desc: "Run and manage your online store with integrated inventory, billing & dispatch.",
             icon: "🛒",
             href: "/ecommerce"
         },
         {
             title: "BUSY Add-ons & Automation",
-            desc: "Enhance BUSY with smart modules like Payment Reminders, WhatsApp Integration, Kart Manager, and more.",
+            desc: "Enhance BUSY with modules like Payment Reminders, Automation & Reporting tools.",
             icon: "⚙️",
             href: "/busy-addons"
-        }
-    ];
-
-
-    const secondaryServices = [
-        {
-            title: "Database Hosting",
-            icon: "🗄️",
-            desc: "Secure and scalable database hosting tailored to BUSY and ERP applications.",
-            bg: "bg-yellow-50",
-            href: "/database-hosting"
         },
         {
-            title: "Data Recovery",
-            icon: "💾",
-            desc: "Recover critical business data with our expert-level data recovery services.",
-            bg: "bg-red-50",
-            href: "/data-recovery"
+            title: "Kart Manager",
+            desc: "Integrate e-commerce platforms with BUSY for automated order, returns, and inventory sync.",
+            icon: "📦",
+            href: "/kart-manager"
         },
         {
-            title: "Remote Desktop Services",
-            icon: "🖥️",
-            desc: "Access your business applications and data remotely with secure RDP setup.",
-            bg: "bg-blue-50",
-            href: "/rdp"
+            title: "BowBi – Business Intelligence",
+            desc: "Generate AI-powered business reports 10x faster with BowBi for BUSY.",
+            icon: "📈",
+            href: "/bowbi"
         },
         {
-            title: "Antivirus Solutions",
-            icon: "🛡️",
-            desc: "Protect your systems with enterprise-grade antivirus and endpoint protection.",
-            bg: "bg-green-50",
-            href: "/antivirus"
+            title: "BUSY to Google",
+            desc: "Sync BUSY reports to Google Sheets automatically with filters and customization.",
+            icon: "🔗",
+            href: "/busy-to-google"
         },
         {
-            title: "Busy Academy – Training Center",
-            icon: "🎓",
-            desc: "Certified training programs on BUSY Accounting Software for professionals & staff.",
-            bg: "bg-purple-50",
-            href: "/busy-academy"
+            title: "Sales Force Automation (SFA)",
+            desc: "Automate and manage your entire field sales operations with BUSY’s SFA Add-on.",
+            icon: "🚀",
+            href: "/sales-force"
+        },
+        {
+            title: "Excellent DMS",
+            desc: "Manage distributors, sales routes, and inventory digitally with Excellent DMS.",
+            icon: "🗂️",
+            href: "/excellent-dms"
+        },
+        {
+            title: "Excellent KYC",
+            desc: "Comprehensive KYC management with digital uploads, verification, and compliance.",
+            icon: "🆔",
+            href: "/excellent-kyc"
+        },
+        {
+            title: "JobsBA",
+            desc: "Specialized job portal for accounting professionals with employer and job seeker tools.",
+            icon: "💼",
+            href: "/jobs-ba"
+        },
+        {
+            title: "Excellent Commerce",
+            desc: "All-in-one platform for digital storefronts and customer experience management.",
+            icon: "🏪",
+            href: "/excellent-commerce"
+        },
+        {
+            title: "Atithi",
+            desc: "Catering software solution for event planners, catering companies, and hospitality.",
+            icon: "🍽️",
+            href: "/atithi"
+        },
+        {
+            title: "attacho",
+            desc: "Attach images and documents to BUSY transactions with this mobile-friendly add-on.",
+            icon: "📎",
+            href: "/attacho"
+        },
+        {
+            title: "Ordering Automation",
+            desc: "Live stock blocking and order automation solution for garment wholesalers.",
+            icon: "📋",
+            href: "/ordering-automation"
+        },
+        {
+            title: "Vendor Portal",
+            desc: "Empower vendors with login access, payments, stock, and sales order management.",
+            icon: "🤝",
+            href: "/vendor-portal"
+        },
+        {
+            title: "Invoice Generation Tool",
+            desc: "Automate attendance, meter, periodic, and rental-based invoicing.",
+            icon: "🧾",
+            href: "/invoice-generation-tool"
+        },
+        {
+            title: "Optical Add-on",
+            desc: "Specialized order and lens management solution for optical retailers and wholesalers.",
+            icon: "👓",
+            href: "/optical-addon"
+        },
+        {
+            title: "Audit Trail Scrub",
+            desc: "Maintain secure, compliant, and traceable logs with Audit Trail Scrub.",
+            icon: "📝",
+            href: "/audit-trail-scrub"
+        },
+        {
+            title: "Mini Aadhat",
+            desc: "BUSY add-on with advanced order booking, tracking, and calculation features.",
+            icon: "📦",
+            href: "/mini-aadhat"
+        },
+        {
+            title: "Excellent Feedback",
+            desc: "Collect and analyze event, customer, and daily task feedback with reports.",
+            icon: "💬",
+            href: "/excellent-feedback"
+        },
+        {
+            title: "Excellent PMS",
+            desc: "Platform for task, performance, and maintenance management.",
+            icon: "📊",
+            href: "/excellent-pms"
         }
     ];
 
@@ -209,7 +272,7 @@ ${formData.studentName || 'Client'}
                 </div>
 
                 {/* Secondary Services Section */}
-                <div className="mt-20 text-center">
+                {/* <div className="mt-20 text-center">
                     <h3 className="text-xl font-bold text-[#00214D] mb-10">
                         Secondary Services
                     </h3>
@@ -232,19 +295,19 @@ ${formData.studentName || 'Client'}
                                             {service.title}
                                         </h4>
                                         <p className="text-sm text-gray-400 hover:text-gray-400 leading-relaxed">{service.desc}</p>
-                                        <button
-                                            onClick={() => handleExploreCategory(service)}
-                                            className="flex items-center text-blue-600 font-medium transition-colors cursor-pointer mt-2"
+                                        <Link
+                                            href={service.href}
+                                            className="flex items-center text-blue-600 font-medium transition-colors cursor-pointer mt-3"
                                         >
                                             Learn More
                                             <ChevronRight className="w-4 h-4 ml-1" />
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </section>
 
             {/* Futuristic Modal */}
