@@ -24,7 +24,7 @@ export default function BouncingSplashButton() {
     return (
         <div className="mt-8">
             <Link
-                href="#contacts"
+                href="#about"
                 ref={buttonRef}
                 onMouseEnter={handleMouseEnter}
                 className="relative overflow-hidden inline-block bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg transition-all duration-300 bouncing-button hover:scale-105"
