@@ -78,6 +78,36 @@ export default async function DynamicPage({ params }: any) {
                                 ) : null}
                             </div>
                         )}
+
+                        {pageData.features && (
+                            <div className="mt-10">
+                                <span className="block text-sm font-bold text-gray-700 uppercase tracking-wide">
+                                    Features
+                                </span>
+
+                                {pageData.features?.length ? (
+                                    <ul className="mt-6 space-y-5 text-sm sm:text-base text-gray-800">
+                                        {pageData.features.map((feature: any, i: number) => (
+                                            <li
+                                                key={i}
+                                                className="flex flex-col sm:flex-row sm:items-start gap-3 bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition"
+                                            >
+                                                <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
+                                                <div>
+                                                    <p className="font-semibold text-gray-900">
+                                                        {feature.title}
+                                                    </p>
+                                                    <p className="text-gray-600">
+                                                        {feature.description}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : null}
+                            </div>
+                        )}
+
                     </div>
                 </div>
 

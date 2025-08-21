@@ -139,7 +139,7 @@ const Footer = () => {
                     <div className="max-w-6xl mx-auto">
 
                         {/* Horizontal Navigation Links */}
-                        <div className="flex flex-wrap justify-center gap-8 lg:gap-12 mb-12">
+                        {/* <div className="flex flex-wrap justify-center gap-8 lg:gap-12 mb-12">
                             <Link href="/" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">
                                 Home
                             </Link>
@@ -158,7 +158,7 @@ const Footer = () => {
                             <Link href="/contacts" className="text-white font-medium text-lg hover:text-[#10b981] transition-colors duration-300">
                                 Contact
                             </Link>
-                        </div>
+                        </div> */}
 
                         {/* Copyright - Center aligned */}
                         <div className="text-center mb-8">

@@ -52,7 +52,7 @@ export const dynamicPages = [
         heading: ["Production ERP Solutions"],
         subheading: ["Streamline Manufacturing with End-to-End ERP Control"],
         description: ["Optimize your production workflow with BUSY’s ERP suite – from inventory and orders to quality checks and final dispatch. Designed for manufacturers seeking efficiency, accuracy, and complete visibility."],
-        images: ["/images/excellent-erp.jpg", "/images/erp3.png"],
+        images: ["/images/excellent-erp.png", "/images/erp3.jpg"],
         points: [
             "Inventory & Materials Management",
             "Order & Sales Management",
@@ -65,18 +65,17 @@ export const dynamicPages = [
     {
         id: "busy-cloud",
         heading: ["BUSY on Cloud"],
-        subheading: ["India`s most trusted Cloud Accounting Software", "Run Your Entire Accounting on the Cloud  with Busy Online"],
-        description: ["Access | Manage | Grow –Anytime, Anywhere", "No more late nights or backup worries!"],
-        images: ["/images/cloud.jpg", "/images/cloud.png"],
+        subheading: ["India`s most trusted Cloud Accounting Software"],
+        description: ["Access | Manage | Grow –Anytime, Anywhere"],
+        images: ["/images/cloud.jpg", "/images/cloud1.png", "/images/cloud1.png", "/images/cloud2.png"],
         points: [
             "Robust Security & Full Data Control",
             "Seamless Business Management from Anywhere",
             "99% Uptime with Azure-Powered Infrastructure",
-            "Work from Home, Office, or On-the-Go",
+            "Work from Anywhere- Home, Office, or On-the-Go ",
             "1-Click GST Filing & E-Way Bills",
             "Multi-User Access with Custom Roles",
             "Auto Backup & Secured Data",
-            "No More Late Nights or Backup Worries!"
         ]
     },
     {
@@ -106,18 +105,50 @@ export const dynamicPages = [
     },
     {
         id: "mobile-apps",
-        heading: ["BUSY MOBILE APP"],
-        subheading: ["NOW SMARTER, BETTER AND FASTER"],
+        heading: ["BUSY Mobile App Simplify Business on the Go"],
+        subheading: ["All New BUSY Mobile app- now Smarter, Faster,  and Better "],
         description: ["Manage your business anytime, anywhere with the all-new BUSY Mobile App. Faster performance, seamless sync, and powerful features packed in your pocket."],
-        images: ["/images/busymobile.jpg", "/images/phone.png"],
+        images: ["/images/phone.png", "/images/phone1.png"],
         points: [
             "3X Faster Voucher Creation",
             "Share Invoices at a Click",
             "Auto-Sync with Desktop",
-            "Create, Share & Print E-way Bills & E-Invoices",
-            "Print Invoices in 2\", 3\" or Standard Formats",
-            "View Pending Entries in Unsynced List",
-            "Smoother and Faster Interface"
+            "Create Parties and Items Instantly",
+            "Generate E-Way Bills and E-Invoices ",
+        ],
+        features: [
+            {
+                title: "Generate Orders, Quotations, & Invoices on the Go",
+                description: "Take Orders, Create Quotations & Invoices anytime, anywhere"
+            },
+            {
+                title: "Create E-way bills and E-invoices instantly",
+                description: "Create & share E-Way Bills and E-Invoices from your mobile"
+            },
+            {
+                title: "Share on WhatsApp, Email & SMS",
+                description: "Share Invoices, Ledgers, Bill Receivables, Reports & More"
+            },
+            {
+                title: "Create party and item with a click",
+                description: "Add party and create item from your phone instantly"
+            },
+            {
+                title: "Send Payment Reminders",
+                description: "Send reminders to customers with overdue payments"
+            },
+            {
+                title: "Create & View Instrument Details in Receipts",
+                description: "Maintain accurate financial records with instrument details within receipts"
+            },
+            {
+                title: "Low Stock Alarms",
+                description: "Prevent stockouts & optimise inventory with customizable alarms"
+            },
+            {
+                title: "Approve Vouchers & Masters",
+                description: "Approve financial transactions & master data changes"
+            }
         ]
     },
     {
@@ -166,7 +197,7 @@ export const dynamicPages = [
         heading: ["BowBi – Business Intelligence for BUSY"],
         subheading: ["Speed Up Your Business Intelligence with BowBi!"],
         description: ["Seamlessly connect BowBi to your BUSY Software and generate AI-powered reports 10x faster. From financial insights to inventory and outstanding analysis — all in seconds."],
-        images: ["/images/ow.jpg", "/images/erp3.png"],
+        images: ["/images/ow.png", "/images/erp3.jpg"],
         points: [
             "AI-Powered Reporting Engine",
             "10X Faster Report Generation",
@@ -182,7 +213,7 @@ export const dynamicPages = [
         heading: ["BUSY to Google"],
         subheading: ["Sync BUSY Reports to Google Sheets Automatically"],
         description: ["Connect BUSY with Google Sheets for real-time, flexible reporting. Configure once and automate report syncing with filters, intervals, and full customization options."],
-        images: ["/images/bg.jpg"],
+        images: ["/images/bg.png"],
         points: [
             "50+ Reports",
             "One-Time Configuration",
@@ -197,7 +228,7 @@ export const dynamicPages = [
         heading: ["Sales Force Automation (SFA)"],
         subheading: ["Empower Your Sales Team with Smart Tools"],
         description: ["Automate and manage your entire field sales operations with BUSY’s SFA Add-on. From order taking to route tracking and payment collection, streamline your sales pipeline for maximum efficiency."],
-        images: ["/images/sfa.png", "/images/erp3.png"],
+        images: ["/images/sfa.png", "/images/erp3.jpg"],
         points: [
             "Product Digital Catalogue for Easy Ordering",
             "Salesman Route Planning & Attendance Tracking",
@@ -228,7 +259,7 @@ export const dynamicPages = [
         heading: ["Excellent DMS"],
         subheading: ["Digitalizing SME Ecosystem"],
         description: ["Routewise  orders,  payment collection on the go using your smartphone. Real time tracking of your  sales activity."],
-        images: ["/images/excellent-dms.jpg"],
+        images: ["/images/excellent-dms.png"],
         points: [
             "Distributor Management",
             "Field Sales (SFA Mobile App)",
@@ -263,7 +294,7 @@ export const dynamicPages = [
         heading: ["Excellent KYC"],
         subheading: ["Comprehensive KYC Management Solution"],
         description: [],
-        images: ["/images/excellent-kyc.jpg"],
+        images: ["/images/excellent-kyc.png"],
         points: [
             "Multi-Entity KYC Management",
             "Customizable Document Requirements",
@@ -277,7 +308,7 @@ export const dynamicPages = [
         heading: ["JobsBA"],
         subheading: ["Specialized Job Portal for Accounting Professionals"],
         description: [""],
-        images: ["/images/jobsba.jpg"],
+        images: ["/images/jobsba.png"],
         points: [
             "Job Listings",
             "Employer Dashboard",
@@ -295,7 +326,7 @@ export const dynamicPages = [
         heading: ["Excellent Commerce"],
         subheading: ["Your All-in-One Platform for Digital Storefront  & Customer Experience Management"],
         description: [],
-        images: ["/images/excellent-commerce.jpg"],
+        images: ["/images/excellent-commerce.png"],
         points: [
             "Product Management",
             "Order & Return Management",
@@ -311,7 +342,7 @@ export const dynamicPages = [
         heading: ["Atithi"],
         subheading: ["Comprehensive Catering Software Solution"],
         description: ["BUSY INTEGRATED-1.png"],
-        images: ["/images/erp3.png", "/images/atithi.jpg"],
+        images: ["/images/erp3.jpg", "/images/atithi.png"],
         points: [
             "Catering Service Providers",
             "Multi-Location Catering Companies",
@@ -324,7 +355,7 @@ export const dynamicPages = [
         heading: ["attacho"],
         subheading: ["Document Attachment Solution for Busy"],
         description: ["We've created a mobile app add-on for Busy software that allows you to attach images to all transactions in your Busy software."],
-        images: ["/images/attacho.jpg", "/images/erp3.png"],
+        images: ["/images/attacho.png", "/images/erp3.jpg"],
         points: [
             "Image Attachments",
             "PDF Support",
@@ -343,7 +374,7 @@ export const dynamicPages = [
         heading: ["Ordering Automation"],
         subheading: ["Live Stock Blocking Solution for Garment Wholesalers"],
         description: [],
-        images: ["/images/ordering-automation.jpg", "/images/erp3.png"],
+        images: ["/images/ordering-automation.png", "/images/erp3.jpg"],
         points: [
             "Order Placement",
             "Stock Blocking",
@@ -363,7 +394,7 @@ export const dynamicPages = [
         heading: ["Vendor Portal"],
         subheading: ["Empowering Efficient Vendor Management"],
         description: [],
-        images: ["/images/vendor-portal.jpg", "/images/erp3.png"],
+        images: ["/images/vendor-portal.png", "/images/erp3.jpg"],
         points: [
             "Vendor Login",
             "Outstanding Payments",
@@ -379,7 +410,7 @@ export const dynamicPages = [
         heading: ["Invoice Generation Tool"],
         subheading: ["Invoice Generation Tool"],
         description: [],
-        images: ["/images/invoice-generation.jpg"],
+        images: ["/images/invoice-generation.png"],
         points: [
             "Attendance Based Invoicing",
             "Meter Reading Based Invoicing",
@@ -395,7 +426,7 @@ export const dynamicPages = [
         heading: ["Optical Add-on"],
         subheading: ["Specialized Solution for the Optical Industry"],
         description: ["Use Case - Optical Add-on"],
-        images: ["/images/optical-add-on.jpg"],
+        images: ["/images/optical-add-on.png"],
         points: [
             "Auto Order to PO",
             "Lens - Wise Management",
@@ -413,7 +444,7 @@ export const dynamicPages = [
         heading: ["Audit Trail Scrub"],
         subheading: ["Audit Trail Maintenance"],
         description: ["Use Case – Audit Trail Scrub"],
-        images: ["/images/audit-trial.jpg"],
+        images: ["/images/audit-trial.png"],
         points: [
             "Data Log Scrubbing",
             "Busy Software Integration",
@@ -434,7 +465,7 @@ export const dynamicPages = [
         heading: ["Mini Aadhat"],
         subheading: ["Add - On Features"],
         description: ["Busy Integrated"],
-        images: ["/images/aadhat.jpg"],
+        images: ["/images/aadhat.png"],
         points: [
             "Sale / Purchase Order Booking",
             "Direct Sale Module",
@@ -458,7 +489,7 @@ export const dynamicPages = [
         heading: ["Excellent Feedback"],
         subheading: ["Smart Feedback Management System for Daily Operations & Events"],
         description: ["Use Case - Excellent Feedback"],
-        images: ["/images/excellent-feedback.jpg"],
+        images: ["/images/excellent-feedback.png"],
         points: [
             "Event Feedback Collection",
             "Daily Task Feedback (Templates)",
@@ -479,7 +510,7 @@ export const dynamicPages = [
         heading: ["Excellent PMS"],
         subheading: ["All- in-One Platform for Task, Performance & Maintenance Management"],
         description: [],
-        images: ["/images/excellent-pms.jpg"],
+        images: ["/images/excellent-pms.png"],
         points: [
             "SMEs & Enterprises",
             "HR & Admin Teams",

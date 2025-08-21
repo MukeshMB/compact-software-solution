@@ -14,13 +14,13 @@ export default function HomePage() {
     return (
         <div className="min-h-screen">
             <HeroSection />
-            <Services />
-            <StatsBanner />
             <PricingSection />
-            <BusyCloud />
-            <Course />
             <BusyMobileApp />
             <BusyRecomSection />
+            <BusyCloud />
+            <Course />
+            <StatsBanner />
+            <Services />
             <Partner />
             <AboutUs />
             <FloatingActionButtons />

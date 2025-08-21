@@ -3,6 +3,7 @@
 import { CloudUpload } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ImageCarousel from "./CarouselCloud";
 
 interface BusyCloudProps {
     imageUrl?: string;
@@ -41,8 +42,10 @@ export default function BusyCloud({ imageUrl }: BusyCloudProps) {
                         </p>
                     </motion.div>
 
+                    <ImageCarousel />
+
                     {/* Image or Icon */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -62,7 +65,7 @@ export default function BusyCloud({ imageUrl }: BusyCloudProps) {
 
                             <div className="absolute -inset-px rounded-xl group-hover:shadow-[0_0_25px_2px_#38bdf8] transition-all duration-300" />
                         </div>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
         </section>

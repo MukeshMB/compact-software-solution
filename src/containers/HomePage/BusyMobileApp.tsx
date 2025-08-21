@@ -7,6 +7,7 @@ import {
     Send,
 } from "lucide-react";
 import Image from "next/image";
+import PhoneCarousel from "./PhoneCarousel";
 
 export default function BusyMobileAppFeatures() {
     const features = [
@@ -84,8 +85,10 @@ export default function BusyMobileAppFeatures() {
                         ))}
                     </div>
 
+                    <PhoneCarousel />
+
                     {/* Phone Image */}
-                    <div className="w-full flex justify-center lg:justify-end">
+                    {/* <div className="w-full flex justify-center lg:justify-end">
                         <div className="group relative w-[300px] h-[440px] sm:w-[350px] sm:h-[520px] transition-transform duration-300 hover:scale-110">
                             <Image
                                 src="/images/phone.png" // Replace with actual image
@@ -94,7 +97,7 @@ export default function BusyMobileAppFeatures() {
                                 className="object-contain rounded-xl"
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* CTA Button */}

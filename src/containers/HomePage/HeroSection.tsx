@@ -9,7 +9,7 @@ const slides = [
     {
         title: "Business Accounting Software",
         description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
-        images: ["/images/accounting.png", "/images/flipkart.png", "/images/busymobile.jpg"]
+        images: ["/images/accounting.png", "/images/busy-recom.png", "/images/busy-mobile.png",  "/images/busy-online.png"]
     },
     {
         title: "Busy",
@@ -27,7 +27,7 @@ const slides = [
     //     images: ["/images/invoice.png"]
     // },
     {
-        title: "29th Anniversary",
+        title: "29+ Years of Trust, Excellence, and Service",
         description: "Committed to excellence in IT services through 29 years of innovation and trust",
         images: ["/images/29year.png"]
     },

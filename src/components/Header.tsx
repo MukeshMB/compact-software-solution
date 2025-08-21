@@ -247,20 +247,26 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
 
                         {/* Right */}
                         <div className="flex items-center space-x-4">
-                            <Link
-                                href="https://busy.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hidden sm:block"
-                            >
-                                <Image
-                                    src="/icons/brand.jpg"
-                                    alt="Brand Logo"
-                                    width={120}
-                                    height={70}
-                                    className="object-contain"
-                                />
-                            </Link>
+                            <div className="flex flex-col items-center">
+                                <Link
+                                    href="https://busy.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hidden sm:block"
+                                >
+                                    <Image
+                                        src="/icons/brand.jpg"
+                                        alt="Brand Logo"
+                                        width={120}
+                                        height={70}
+                                        className="object-contain"
+                                    />
+                                </Link>
+                                {/* Text below logo */}
+                                <p className="text-sm font-semibold text-gray-700 mt-1 text-center">
+                                    Authorized Channel Partner
+                                </p>
+                            </div>
 
                             {/* Mobile Toggle */}
                             <div className="lg:hidden">
@@ -281,6 +287,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                 </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
