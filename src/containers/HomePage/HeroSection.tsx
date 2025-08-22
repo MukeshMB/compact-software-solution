@@ -9,7 +9,7 @@ const slides = [
     {
         title: "Business Accounting Software",
         description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
-        images: ["/images/accounting.png", "/images/busy-recom.png", "/images/busy-mobile.png",  "/images/busy-online.png"]
+        images: ["/images/accounting.png", "/images/busy-recom.png", "/images/busy-mobile.png", "/images/busy-online.png"]
     },
     {
         title: "Busy",
@@ -62,7 +62,7 @@ export default function Hero() {
             <div className="relative z-10 container mx-auto px-4 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
 
                 {/* Text */}
-                <div className="w-full lg:w-1/2 relative h-[220px] md:h-[260px] lg:h-[280px] overflow-hidden">
+                <div className="w-full lg:w-1/2 relative min-h-[220px] md:min-h-[260px] lg:min-h-[280px] h-auto overflow-visible">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={`${currentSlide}`}
@@ -70,14 +70,14 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="absolute inset-0"
+                            className="absolute md:relative inset-0"
                         >
                             <motion.h1
                                 initial={{ x: -30, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ x: 30, opacity: 0 }}
                                 transition={{ delay: 0.1, duration: 0.6 }}
-                                className="text-4xl md:text-6xl font-baloo font-bold text-white tracking-wide drop-shadow-[2px_2px_3px_rgba(0,0,0,0.3)] mb-4"
+                                className="text-3xl sm:text-4xl md:text-6xl font-baloo font-bold text-white tracking-wide drop-shadow-[2px_2px_3px_rgba(0,0,0,0.3)] mb-4 text-center md:text-left px-2"
                             >
                                 {slides[currentSlide].title}
                             </motion.h1>
@@ -86,13 +86,14 @@ export default function Hero() {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
-                                className="text-xl sm:text-2xl text-white/90"
+                                className="text-lg sm:text-xl md:text-2xl text-white/90 text-center md:text-left px-2"
                             >
                                 {slides[currentSlide].description}
                             </motion.p>
                         </motion.div>
                     </AnimatePresence>
                 </div>
+
 
                 {/* Images */}
                 <div className="w-full lg:w-1/2 relative overflow-hidden h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">

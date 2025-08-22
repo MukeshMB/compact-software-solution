@@ -147,6 +147,12 @@ const secondaryServices = [
         icon: "🛠️",
         href: "/excellent-pms"
     },
+    {
+        title: "Busy Online",
+        desc: "Run your business anytime, anywhere with secure cloud-based accounting for SMBs.",
+        icon: "🌐",
+        href: "/busy-online"
+    },
 ];
 
 
@@ -154,7 +160,7 @@ const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Job Portal', href: 'https://busy.in' },
+    { name: 'Job Portal', href: 'https://jobsba.com/REMP?PID=JBS20' },
     { name: 'Contacts', href: '/contacts' },
 ]
 
@@ -263,7 +269,7 @@ export default function FuturisticHeader({ activePage }: { activePage: string })
                                     />
                                 </Link>
                                 {/* Text below logo */}
-                                <p className="text-sm font-semibold text-gray-700 mt-1 text-center">
+                                <p className={`text-sm font-semibold ${scrolled ? 'text-gray-700' : 'text-white'} mt-1 text-center hidden sm:block`}>
                                     Authorized Channel Partner
                                 </p>
                             </div>

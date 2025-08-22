@@ -13,11 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baloo2 = Baloo_2({
-  weight: ['600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
+// const baloo2 = Baloo_2({
+//   weight: ['600', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+// });
+// ${baloo2.className}
 
 
 export const metadata: Metadata = {
@@ -121,7 +122,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${baloo2.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
       >
         <NextTopLoader
           color="#3B82F6"         // Customize color

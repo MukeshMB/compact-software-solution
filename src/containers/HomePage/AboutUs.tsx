@@ -1,13 +1,21 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 import SplashButton from "./SplashButton";
 
 const images = [
   "/images/client.jfif",
   "/images/team1.jpg",
   "/images/certificates.jpg",
+];
+
+// Replace these with your uploaded icons (use actual paths)
+const highlightPoints = [
+  { icon: "/icons/experience.png", text: "Experience" },
+  { icon: "/icons/innovation.png", text: "Innovation" },
+  { icon: "/icons/hand.png", text: "Strong Support" },
+  { icon: "/icons/star.png", text: "Customer Trust" },
 ];
 
 export default function AboutUs() {
@@ -38,7 +46,8 @@ export default function AboutUs() {
       className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-10 px-4 sm:px-8 lg:px-20"
     >
       <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Image Carousel */}
+
+        {/* Left Side - Carousel */}
         <div className="w-full h-72 sm:h-96 md:h-[30rem] lg:h-[34rem] overflow-hidden rounded-xl shadow-lg">
           <div
             ref={carouselRef}
@@ -56,7 +65,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Text content */}
+        {/* Right Side - Content */}
         <div>
           <div className="text-center md:text-left">
             <span className="text-[#00AA3E] text-sm font-bold uppercase tracking-wide block">
@@ -69,24 +78,23 @@ export default function AboutUs() {
 
           {/* Intro Paragraph */}
           <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-            It is our privilege to introduce <strong>Compact Softwares & Services (CSS)</strong>, 
-            a company engaged in providing IT sales and services for over <strong>29+ years</strong>. 
-            Today we stand with more than <strong>25,000+ satisfied customers</strong> across all industry verticals. 
-            A network of <strong>50+ dedicated IT Channel Associates</strong> and <strong>100+ accounting professionals</strong> 
-            help us deliver diverse business solutions. We are an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong> 
-            (BUSY – The Complete Business Accounting Software) since <strong>1996</strong>. 
-            We have consistently ranked <strong>No. 1 in sales performance</strong> right from the beginning. 
-            Team CSS is known among its customers for providing the latest technological solutions at affordable prices. 
-            Our customers range from small shopkeepers to large industries. We are proud that <strong>65% of our enquiries</strong> 
-            come from existing users – a true reflection of our strong after-sales service. 
+            It is our privilege to introduce <strong>Compact Softwares & Services (CSS)</strong>,
+            a company engaged in providing IT sales and services for over <strong>29+ years</strong>.
+            Today we stand with more than <strong>25,000+ satisfied customers</strong> across all industry verticals.
+            A network of <strong>50+ dedicated IT Channel Associates</strong> and <strong>100+ accounting professionals</strong>
+            help us deliver diverse business solutions. We are an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong>
+            (BUSY – The Complete Business Accounting Software) since <strong>1996</strong>.
+            We have consistently ranked <strong>No. 1 in sales performance</strong> right from the beginning.
+            Team CSS is known among its customers for providing the latest technological solutions at affordable prices.
+            Our customers range from small shopkeepers to large industries. We are proud that <strong>65% of our enquiries</strong>
+            come from existing users – a true reflection of our strong after-sales service.
             We believe in building long-term relationships and becoming your trusted business growth partner.
           </p>
 
-          {/* Why Choose Section */}
+          {/* Keep your existing bullet list */}
           <h3 className="mt-8 text-xl sm:text-2xl text-blue-700">
             Why Choose Compact Software & Services?
           </h3>
-
           <ul className="mt-4 space-y-3 text-gray-800 text-sm sm:text-base">
             {[
               "29+ Years of Experience – We bring decades of expertise in IT and software solutions, ensuring trust, stability, and consistent service delivery.",
@@ -101,13 +109,32 @@ export default function AboutUs() {
               "Affordable & Scalable Solutions – Offering the latest technological advancements at competitive pricing.",
             ].map((point, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                <span className="w-5 h-5 mt-1 text-blue-600">✔</span>
                 <span>{point}</span>
               </li>
             ))}
           </ul>
 
+          {/* Highlighted Motion Points (Icons + Motion + Highlight) */}
+          <div className="mt-6 flex flex-col md:flex-row md:flex-wrap gap-6">
+            {highlightPoints.map((item, i) => (
+              <motion.div
+                key={i}
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.3 }}
+                whileHover={{ scale: 1.05, color: "#b91c1c" }} // highlight on hover
+              >
+                <img src={item.icon} alt={item.text} className="w-6 h-6" />
+                <span className="font-semibold text-[#b91c1c]">{item.text}</span>
+              </motion.div>
+            ))}
+          </div>
+
+
           <SplashButton name="Learn More About Us" href="#contacts" />
+
         </div>
       </div>
     </section>

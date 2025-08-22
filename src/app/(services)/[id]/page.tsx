@@ -7,6 +7,7 @@ import FloatingActionButtons from "@/containers/HomePage/FloatingActionButtons";
 import AutoScrollCarousel from "./AutoScrollCarousel";
 import PageHeading from "./AutoScrollHeading";
 import PageDescription from "./AutoScrollDescription";
+import PointsList from "./AnimatedBullets";
 
 
 export default async function DynamicPage({ params }: any) {
@@ -49,17 +50,7 @@ export default async function DynamicPage({ params }: any) {
 
                         <PageDescription pageData={pageData} />
 
-                        {pageData.points?.length ? (
-                            <ul className="mt-6 space-y-3 text-sm sm:text-base text-gray-800">
-                                {pageData.points.map((point, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <CheckCircle className="w-5 h-5 text-blue-500 mt-1" />
-                                        <span>{point}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : null}
-
+                        <PointsList points={pageData.points} />
                         {/* Use Case Section */}
                         {pageData.useCases && (
                             <div className="mt-6">
@@ -90,7 +81,7 @@ export default async function DynamicPage({ params }: any) {
                                         {pageData.features.map((feature: any, i: number) => (
                                             <li
                                                 key={i}
-                                                className="flex flex-col sm:flex-row sm:items-start gap-3 bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition"
+                                                className="flex flex-col sm:flex-row sm:items-start gap-3 bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition hover:scale-[1.02]"
                                             >
                                                 <CheckCircle className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                                                 <div>

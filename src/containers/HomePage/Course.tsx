@@ -2,12 +2,17 @@ import Link from "next/link";
 
 export default function Course() {
     return (
-        <section id="training" className="relative py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/images/course-banner.png")' }}>
-            <div className="absolute inset-0 bg-black/30 z-0" />
-            <div className="max-w-8xl mx-auto px-6 flex flex-col lg:flex-row items-top justify-between gap-10">
+        <section
+            id="training"
+            className="relative py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 justify-center overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: 'url("/images/course-banner.png")' }}
+        >
+            {/* Blur Overlay */}
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-md z-0" />
 
+            <div className="max-w-8xl mx-auto px-6 flex flex-col lg:flex-row items-top justify-between gap-10 relative z-10">
                 {/* Left Image */}
-                <div className="w-full lg:w-1/2 lg:h-1/5 flex justify-center z-10">
+                <div className="w-full lg:w-1/2 lg:h-1/5 flex justify-center">
                     <img
                         src="/images/course.jpg"
                         alt="Professional Training"
@@ -16,11 +21,11 @@ export default function Course() {
                 </div>
 
                 {/* Content */}
-                <div className="w-full lg:w-2/4 text-center lg:text-left z-10">
+                <div className="w-full lg:w-2/4 text-center lg:text-left">
                     <h2 className="text-4xl font-bold text-white mb-3">
                         Professional Training & Courses
                     </h2>
-                    <p className="text-lg font-medium text-white  italic mb-6">
+                    <p className="text-lg font-medium text-white italic mb-6">
                         "Make Yourself Instantly Employable"
                     </p>
 
@@ -30,7 +35,9 @@ export default function Course() {
                     </ul>
 
                     <div className="mb-4">
-                        <h3 className="text-xl font-semibold text-white  mb-2">Courses Offered:</h3>
+                        <h3 className="text-xl font-semibold text-white mb-2">
+                            Courses Offered:
+                        </h3>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-white list-disc list-outside">
                             <li>Basics of Computers</li>
                             <li>Computerized Accounting</li>
@@ -56,11 +63,11 @@ export default function Course() {
                 </div>
 
                 {/* Right Image */}
-                <div className="w-full lg:w-1/2 lg:h-1/5 flex justify-center z-10">
+                <div className="w-full lg:w-1/2 lg:h-1/5 flex justify-center">
                     <img
                         src="/images/girl.png"
                         alt="Professional Training"
-                        className="w-full max-w-xs lg:max-w-sm"
+                        className="w-full max-w-xs lg:max-w-sm brightness-80"
                     />
                 </div>
 

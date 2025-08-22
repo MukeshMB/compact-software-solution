@@ -67,7 +67,7 @@ export const dynamicPages = [
         heading: ["BUSY on Cloud"],
         subheading: ["India`s most trusted Cloud Accounting Software"],
         description: ["Access | Manage | Grow –Anytime, Anywhere"],
-        images: ["/images/cloud.jpg", "/images/cloud1.png", "/images/cloud1.png", "/images/cloud2.png"],
+        images: ["/images/cloud.jpg", "/images/cloud1.png", "/images/cloud2.png"],
         points: [
             "Robust Security & Full Data Control",
             "Seamless Business Management from Anywhere",
@@ -81,9 +81,9 @@ export const dynamicPages = [
     {
         id: "payroll",
         heading: ["Payroll Management"],
-        subheading: ["Simplify HR, Payroll & Compliance – All in One Place"],
+        subheading: ["Simplify HR, Payroll & Compliance All in One Place"],
         description: ["Automate your payroll operations with BUSY’s Payroll Management solution – from salary processing and compliance to attendance tracking and employee communication. Designed for growing businesses and HR teams."],
-        images: ["/partners/6.png"],
+        images: ["/images/excellent-pay.png"],
         points: [
             "Core HR & Statutory Compliance",
             "Attendance & Leave Management",
@@ -517,6 +517,22 @@ export const dynamicPages = [
             "Operations &  Maintenance Managers",
             "Project Managers",
             "Facility Managers"
+        ]
+    },
+    {
+        id: "busy-online",
+        heading: ["Busy Online"],
+        subheading: ["Busy Online Run your  Business Anytime,  Anywhere"],
+        description: [
+            "Busy Online is a cloud accounting software designed for SMBs in India. Manage your business effortlessly with secure, remote access-no  IT expertise required. Run your business without any boundaries.",
+            "Seamless Access, Total Control – Wherever You Go",
+        ],
+        images: ["/images/busy-online.png"],
+        points: [
+            "Advanced Data Protection",
+            "Never Worry About Data Loss",
+            "Your Data, Always Accessible",
+            "Quick Access, Seamless Experience",
         ]
     },
 ];

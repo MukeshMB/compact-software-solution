@@ -32,19 +32,18 @@ export default function FloatingActionButtons() {
                     style={{ objectFit: "cover" }}
                 />
 
-
-                <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
+                <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg hidden sm:block">
                     Chat on WhatsApp
                     <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-800 border-y-4 border-y-transparent"></div>
                 </div>
+
             </a>
 
             {/* Phone Button */}
             <a
                 href="tel:+919667337837"
-                className="bg-transparent text-white transition-all duration-300 transform hover:scale-110 relative group flex items-center justify-center"
+                className="bg-transparent text-white transition-all duration-300 transform hover:scale-110 relative group flex items-center justify-center sm:hidden"
             >
-                {/* <Phone className="w-6 h-6" /> */}
                 <Image
                     src="/icons/phone.gif"
                     alt="Sample"
@@ -52,11 +51,14 @@ export default function FloatingActionButtons() {
                     height={80}
                     style={{ objectFit: "cover" }}
                 />
-                <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
+
+                {/* Tooltip only visible on desktop, but since we are hiding whole button in desktop, no need */}
+                <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg hidden sm:block">
                     Call Now
                     <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-800 border-y-4 border-y-transparent"></div>
                 </div>
             </a>
+
         </div>
     )
 }

@@ -3,11 +3,20 @@
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion"; // Import for animation
 
 const images = [
   "/images/client.jfif",
   "/images/team1.jpg",
   "/images/certificates.jpg",
+];
+
+// Highlight points with icon paths
+const highlightPoints = [
+  { icon: "/icons/experience.png", text: "Experience" },
+  { icon: "/icons/innovation.png", text: "Innovation" },
+  { icon: "/icons/hand.png", text: "Strong Support" },
+  { icon: "/icons/star.png", text: "Customer Trust" },
 ];
 
 export default function About() {
@@ -18,7 +27,6 @@ export default function About() {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -38,7 +46,6 @@ export default function About() {
       {/* Hero Section */}
       <div className="relative pt-20 px-4 text-center bg-[#09356C] text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-
         <div className="relative z-10 max-w-3xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
             About Us
@@ -67,15 +74,12 @@ export default function About() {
               />
             ))}
           </div>
-
           {/* Indicators */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, i) => (
               <span
                 key={i}
-                className={`h-2 w-2 rounded-full transition-all ${
-                  i === index ? "bg-blue-600 w-4" : "bg-gray-300"
-                }`}
+                className={`h-2 w-2 rounded-full transition-all ${i === index ? "bg-blue-600 w-4" : "bg-gray-300"}`}
               ></span>
             ))}
           </div>
@@ -90,22 +94,38 @@ export default function About() {
             Welcome to Compact Softwares & Services
           </h2>
 
-          {/* Intro Paragraph */}
           <p className="mt-6 text-gray-700 text-base sm:text-lg leading-relaxed">
-            It is our privilege to introduce <strong>Compact Softwares & Services (CSS)</strong>, 
-            a company engaged in providing IT sales and services for over <strong>29+ years</strong>. 
+            It is our privilege to introduce <strong>Compact Softwares & Services (CSS)</strong>,
+            a company engaged in providing IT sales and services for over <strong>29+ years</strong>.
             Today we proudly serve more than <strong>25,000+ satisfied customers</strong> across diverse industries.
           </p>
           <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-            Backed by a strong network of <strong>50+ dedicated IT Channel Associates</strong> and 
-            <strong> 100+ accounting professionals</strong>, CSS has been an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong> 
+            Backed by a strong network of <strong>50+ dedicated IT Channel Associates</strong> and
+            <strong>100+ accounting professionals</strong>, CSS has been an <strong>Authorized Channel Partner of BUSY Infotech Pvt. Ltd.</strong>
             since <strong>1996</strong>. We have consistently ranked <strong>No.1 in sales performance</strong> since our inception.
           </p>
           <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-            With <strong>65% of our enquiries coming from existing customers</strong>, 
-            we are proud of our strong after-sales support. From small shopkeepers to large industries, 
+            With <strong>65% of our enquiries coming from existing customers</strong>,
+            we are proud of our strong after-sales support. From small shopkeepers to large industries,
             CSS is committed to delivering affordable, innovative, and scalable technology solutions tailored to your business.
           </p>
+
+          {/* Animated Highlighted Points */}
+          <div className="mt-8 flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-start">
+            {highlightPoints.map((item, i) => (
+              <motion.div
+                key={i}
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.3 }}
+                whileHover={{ scale: 1.05, color: "#991b1b" }} // dark red highlight
+              >
+                <img src={item.icon} alt={item.text} className="w-6 h-6" />
+                <span className="font-semibold text-[#7f1d1d]">{item.text}</span> {/* slightly lower brightness red */}
+              </motion.div>
+            ))}
+          </div>
 
           {/* Why Choose Us */}
           <h3 className="mt-10 text-xl sm:text-2xl font-bold text-blue-700 relative inline-block">

@@ -91,7 +91,7 @@ const Footer = () => {
                                             rel="noopener noreferrer"
                                             className="text-white/90 font-medium hover:text-[#10b981] transition-colors duration-300"
                                         >
-                                            258, Pocket-5, Sector-2, Rohini, Delhi-110088
+                                            258, Pocket-5, Sector-2, Rohini, Delhi-1100085
                                         </a>
                                     </div>
                                 </div>
