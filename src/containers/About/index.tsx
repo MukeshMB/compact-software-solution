@@ -111,7 +111,7 @@ export default function About() {
           </p>
 
           {/* Animated Highlighted Points */}
-          <div className="mt-8 flex flex-col md:flex-row md:flex-wrap gap-6 md:justify-start">
+          <div className="mt-6 flex flex-col md:flex-row md:flex-wrap gap-6">
             {highlightPoints.map((item, i) => (
               <motion.div
                 key={i}
@@ -119,13 +119,18 @@ export default function About() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.3 }}
-                whileHover={{ scale: 1.05, color: "#991b1b" }} // dark red highlight
+                whileHover={{
+                  scale: 1.2, // Increase the hover scale
+                  color: "#b91c1c",
+                  transition: { duration: 0.2, ease: "easeOut" } // Faster transition
+                }}
               >
                 <img src={item.icon} alt={item.text} className="w-6 h-6" />
-                <span className="font-semibold text-[#7f1d1d]">{item.text}</span> {/* slightly lower brightness red */}
+                <span className="font-semibold text-[#b91c1c]">{item.text}</span>
               </motion.div>
             ))}
           </div>
+
 
           {/* Why Choose Us */}
           <h3 className="mt-10 text-xl sm:text-2xl font-bold text-blue-700 relative inline-block">

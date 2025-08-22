@@ -124,13 +124,18 @@ export default function AboutUs() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.3 }}
-                whileHover={{ scale: 1.05, color: "#b91c1c" }} // highlight on hover
+                whileHover={{
+                  scale: 1.2, // Increase the hover scale
+                  color: "#b91c1c",
+                  transition: { duration: 0.2, ease: "easeOut" } // Faster transition
+                }}
               >
                 <img src={item.icon} alt={item.text} className="w-6 h-6" />
                 <span className="font-semibold text-[#b91c1c]">{item.text}</span>
               </motion.div>
             ))}
           </div>
+
 
 
           <SplashButton name="Learn More About Us" href="#contacts" />
