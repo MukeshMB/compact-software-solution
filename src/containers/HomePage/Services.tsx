@@ -162,6 +162,12 @@ export default function Services() {
             desc: "Platform for task, performance, and maintenance management.",
             icon: "📊",
             href: "/excellent-pms"
+        },
+        {
+            title: "Busy Online",
+            desc: "Run your business anytime, anywhere with Busy Online cloud accounting software.",
+            icon: "🌐", // Cloud emoji fits well for online/cloud software
+            href: "/busy-online"
         }
     ];
 
