@@ -7,9 +7,9 @@ import BouncingSplashButton from "./BouncingSplashButton";
 
 const slides = [
     {
-        title: "Business Accounting Software",
-        description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
-        images: ["/images/accounting.png", "/images/busy-recom.png", "/images/busy-mobile.png", "/images/busy-online.png"]
+        title: "29+ Years of Trust, Excellence, and Service",
+        description: "Committed to excellence in IT services through 29 years of innovation and trust",
+        images: ["/images/29year.png"]
     },
     {
         title: "Busy",
@@ -17,19 +17,14 @@ const slides = [
         images: ["/images/busybacht.png"]
     },
     {
-        title: "ERP",
-        description: "Excellent ERP system can provide industries with increased operational efficiency, better data management, improved collaboration, enhanced customer satisfaction, compliance adherence, scalability, and informed decision-making.",
-        images: ["/images/erp2.png"]
+        title: "Business Accounting Software",
+        description: "Accounting Made Easy, Business Made Successful, Your Numbers, Your Success, Our Priority,Simplify Finances, Maximize Profits, and Accurate Accounting, Confident Decisions",
+        images: ["/images/accounting.png", "/images/busy-recom.png", "/images/busy-mobile.png", "/images/busy-online.png"]
     },
-    // {
-    //     title: "Invoices",
-    //     description: "Simplify Your Checkout Process. Barcode Billing Made Easy. Reliable POS for Every Business.",
-    //     images: ["/images/invoice.png"]
-    // },
     {
-        title: "29+ Years of Trust, Excellence, and Service",
-        description: "Committed to excellence in IT services through 29 years of innovation and trust",
-        images: ["/images/29year.png"]
+        title: "Busy Add-ons",
+        description: "Busy add on softwares customisations- customise your own your more business growth, BUSY Accounting Software.",
+        images: ["/icons/add-on-sheet.png"]
     },
 ];
 

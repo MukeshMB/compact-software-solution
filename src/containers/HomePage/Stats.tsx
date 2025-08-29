@@ -25,8 +25,8 @@ const stats = [
   {
     icon: <Hammer className="text-blue-500 w-6 h-6" />,
     label: "Project Deliveries",
-    value: 327,
-    suffix: "",
+    value: 1000,
+    suffix: "+",
   },
   {
     icon: <MessageCircle className="text-blue-500 w-6 h-6" />,

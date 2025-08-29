@@ -1,86 +1,72 @@
 'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 const clientLogos = Array.from({ length: 37 }, (_, i) => `/clients/${i + 1}.jpg`);
+const COLLAPSE_SCROLL_DELAY_MS = 100; // adjust if needed
 
 export default function Clients() {
-    const [cardWidth, setCardWidth] = useState(0);
-    const [visibleCount, setVisibleCount] = useState(4); // default
-    const [index, setIndex] = useState(0);
-    const containerRef = useRef<HTMLDivElement>(null);
+    const [showAll, setShowAll] = useState(false);
+    const buttonRef = useRef<HTMLDivElement>(null);
+    const scrollTimeoutRef = useRef<number | null>(null);
 
-    // Set visible cards based on screen size
     useEffect(() => {
-        const handleResize = () => {
-            const width = window.innerWidth;
-            if (width < 640) {
-                setVisibleCount(2);
-            } else if (width < 1024) {
-                setVisibleCount(3);
-            } else {
-                setVisibleCount(4);
+        return () => {
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
             }
         };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // Set card width after layout
-    useEffect(() => {
-        if (containerRef.current) {
-            const containerWidth = containerRef.current.offsetWidth;
-            setCardWidth(containerWidth / visibleCount);
+    const handleToggle = () => {
+        if (showAll) {
+            // Collapsing: first hide, then scroll after a delay
+            setShowAll(false);
+            if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+            scrollTimeoutRef.current = window.setTimeout(() => {
+                buttonRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, COLLAPSE_SCROLL_DELAY_MS);
+        } else {
+            // Expanding: just show all
+            setShowAll(true);
         }
-    }, [visibleCount]);
+    };
 
-    // Infinite scrolling
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => prev + 1);
-        }, 2500);
-        return () => clearInterval(interval);
-    }, []);
-
-    const allLogos = [...clientLogos]; // duplicated for loop illusion
-    const totalWidth = allLogos.length * cardWidth;
-    const translateX = -(index * cardWidth) % totalWidth;
+    const visibleLogos = showAll ? clientLogos : clientLogos.slice(0, 4);
 
     return (
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-center text-3xl font-bold text-gray-800 mb-12 tracking-tight">
+            <div className="max-w-7xl mx-auto text-center">
+                <h2 className="text-3xl font-bold text-gray-800 mb-12 tracking-tight">
                     Our Clients
                 </h2>
 
-                <div
-                    ref={containerRef}
-                    className="relative overflow-hidden w-full"
-                >
-                    <div
-                        className="flex transition-transform duration-700 ease-in-out"
-                        style={{
-                            transform: `translateX(${translateX}px)`,
-                            width: `${totalWidth}px`,
-                        }}
+                {/* Clients Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 place-items-center">
+                    {visibleLogos.map((logo, idx) => (
+                        <div
+                            key={idx}
+                            className="relative h-20 w-32 flex items-center justify-center bg-white shadow-md rounded-lg p-2 hover:scale-105 transition-transform"
+                        >
+                            <Image
+                                src={logo}
+                                alt={`Client ${idx + 1}`}
+                                fill
+                                className="object-contain p-2"
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Show More / Less Button */}
+                <div className="mt-10" ref={buttonRef}>
+                    <button
+                        onClick={handleToggle}
+                        className="px-6 py-3 text-white bg-green-500 rounded-full font-semibold shadow-lg hover:bg-green-600 focus:outline-none animate-bounce"
                     >
-                        {allLogos.map((logo, idx) => (
-                            <div
-                                key={idx}
-                                className="relative h-16 flex-shrink-0"
-                                style={{ width: `${cardWidth}px` }}
-                            >
-                                <Image
-                                    src={logo}
-                                    alt={`Client ${idx + 1}`}
-                                    fill
-                                    className="object-contain"
-                                />
-                            </div>
-                        ))}
-                    </div>
+                        {showAll ? "View Less" : "View More"}
+                    </button>
                 </div>
             </div>
         </section>

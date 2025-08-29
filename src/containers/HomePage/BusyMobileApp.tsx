@@ -6,7 +6,6 @@ import {
     Cloud,
     Send,
 } from "lucide-react";
-import Image from "next/image";
 import PhoneCarousel from "./PhoneCarousel";
 
 export default function BusyMobileAppFeatures() {

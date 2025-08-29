@@ -535,4 +535,40 @@ export const dynamicPages = [
             "Quick Access, Seamless Experience",
         ]
     },
+    {
+        id: "busy-mandi",
+        heading: ["Busy Mandi"],
+        subheading: ["Busy for Mandi- Accounting made easy for mandi"],
+        description: [
+            "From Auction to Billing to GST– BUSY for Mandi is the only integrated accounting solution designed for Commission Agents in Anaj, Sabji and Fal Mandis.",
+        ],
+        images: ["/images/mandi-1.png", "/images/mandi-2.png", "/images/mandi-3.png"],
+        points: [
+            "Manage Mandi Seamlessly",
+            "Insightful Business Reports",
+            "Smart Accounting",
+            "Stay Compliant with GST Management",
+            "Advanced Inventory Management",
+            "Filling",
+        ]
+    },
+    {
+        id: "busy-recomm",
+        heading: ["Busy Recomm"],
+        subheading: ["Your Complete Business Accounting Partner – BUSY Software"],
+        description: [
+            "BUSY is a powerful business accounting software designed for small & medium enterprises. From billing and inventory to GST compliance, BUSY makes financial management simple, accurate, and hassle-free.",
+        ],
+        images: ["/images/busy-recom.png"],
+        points: [
+            "GST-Ready Billing & Return Filing",
+            "Complete Inventory Management",
+            "Multi-Company & Multi-User Support",
+            "Advanced MIS Reports & Analytics",
+            "Mobile App for Anytime, Anywhere Access",
+            "Payroll & Employee Management",
+            "Robust Data Security & Backup",
+            "Industry-Specific Solutions (Retail, Manufacturing, Distribution, etc.)",
+        ]
+    },
 ];

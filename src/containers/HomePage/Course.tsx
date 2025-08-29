@@ -14,7 +14,7 @@ export default function Course() {
                 {/* Left Image */}
                 <div className="w-full lg:w-1/2 lg:h-1/5 flex justify-center">
                     <img
-                        src="/images/course.jpg"
+                        src="/images/admission.jpg"
                         alt="Professional Training"
                         className="rounded-2xl shadow-xl w-full max-w-xs lg:max-w-sm"
                     />
@@ -23,10 +23,10 @@ export default function Course() {
                 {/* Content */}
                 <div className="w-full lg:w-2/4 text-center lg:text-left">
                     <h2 className="text-4xl font-bold text-white mb-3">
-                        Professional Training & Courses
+                        Authorised Busy Academy
                     </h2>
                     <p className="text-lg font-medium text-white italic mb-6">
-                        "Make Yourself Instantly Employable"
+                        Become A true Accounting Professional
                     </p>
 
                     <ul className="space-y-2 text-white text-base font-medium mb-6">
