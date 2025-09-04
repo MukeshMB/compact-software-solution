@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
-const clientLogos = Array.from({ length: 37 }, (_, i) => `/clients/${i + 1}.jpg`);
+const clientLogos = Array.from({ length: 38 }, (_, i) => `/clients/${i + 1}.jpg`);
 const COLLAPSE_SCROLL_DELAY_MS = 100; // adjust if needed
 
 export default function Clients() {

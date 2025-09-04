@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Client from "./Client";
 
-const logos = Array.from({ length: 6 }, (_, i) => `/partners/${i + 1}.${i <= 3 ? 'png' : 'png'}`);
+const logos = Array.from({ length: 7 }, (_, i) => `/partners/${i + 1}.png`);
 
 export default function Partner() {
     const [cardWidth, setCardWidth] = useState(0);

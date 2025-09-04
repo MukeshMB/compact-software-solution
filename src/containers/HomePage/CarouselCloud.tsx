@@ -4,9 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-    "/images/cloud.png",
-    "/images/cloud2.png",
-    "/images/cloud1.png",
+    "/images/cloud3.jpg",
 ];
 
 export default function AutoCarousel() {
@@ -22,7 +20,7 @@ export default function AutoCarousel() {
 
     return (
         <div className="w-full flex justify-center px-4">
-            <div className="relative w-full max-w-2xl aspect-[3/2] overflow-hidden rounded-2xl shadow-xl bg-gradient-to-br from-[#0ea5e9]/10 via-[#1e3a8a]/10 to-[#0ea5e9]/5 p-4 sm:p-6">
+            <div className="relative w-full max-w-2xl aspect-[3/2] overflow-hidden  p-4 sm:p-6">
                 <motion.div
                     key={index}
                     initial={{ x: 100, opacity: 0 }}

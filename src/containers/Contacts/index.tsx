@@ -127,7 +127,7 @@ export default function ContactUsPage() {
         setIsSubmitting(true);
         const { name, email, mobile, message } = form;
         const encodedMessage = encodeURIComponent(
-            `New Inquiry:\n\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
+            `Hello Compact Softwares & Services Team, I visited your website and would like to request a demo of your products.\n\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`
         );
         const whatsappURL = `https://wa.me/917872727171?text=${encodedMessage}`;
 
@@ -145,38 +145,6 @@ export default function ContactUsPage() {
             generateCaptcha();
         }, 1000);
     };
-
-
-    const contactInfo = [
-        {
-            icon: Phone,
-            title: "Phone",
-            content: "+91-7872727171, 9810214216",
-            subtitle: "Call us during business hours",
-            color: "from-green-500 to-emerald-600"
-        },
-        {
-            icon: Mail,
-            title: "Email",
-            content: "sales@cssbusy.com",
-            subtitle: "We'll respond within 24 hours",
-            color: "from-blue-500 to-cyan-600"
-        },
-        {
-            icon: MapPin,
-            title: "Address",
-            content: "258, Pocket-5, Sector-2, Rohini, Delhi-110088",
-            subtitle: "Visit our main office",
-            color: "from-red-500 to-pink-600"
-        },
-        {
-            icon: Building,
-            title: "Branches",
-            content: "Kundli, Jhajjar, Bahadurgarh, Jind, Sonipat, Rohtak",
-            subtitle: "Multiple locations to serve you",
-            color: "from-purple-500 to-indigo-600"
-        }
-    ];
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">

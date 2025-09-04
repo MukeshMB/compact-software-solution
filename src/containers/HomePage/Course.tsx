@@ -52,7 +52,7 @@ export default function Course() {
 
                     <div className="mt-8">
                         <Link
-                            href="https://wa.me/919667337837?text=Hi%20Compact%20Softwares,%20I%20need%20more%20info%20about%20the%20courses"
+                            href="https://wa.me/917872727171?text=I am interested in your Authorized Busy Academy and would like to request detailed information regarding the available courses, training schedules, and pricing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bouncing-button inline-block bg-[#00AA3E] text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-[#009237] transition-all duration-300"

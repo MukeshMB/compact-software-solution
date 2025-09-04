@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import SplashButton from "./SplashButton";
 
 const images = [
-  "/images/client.jfif",
-  "/images/team1.jpg",
-  "/images/certificates.jpg",
+  "/images/begin.jpg",
+  "/images/team2.jpg",
+  "/images/congrats.jpg",
 ];
 
 // Replace these with your uploaded icons (use actual paths)
@@ -48,7 +48,7 @@ export default function AboutUs() {
       <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* Left Side - Carousel */}
-        <div className="w-full h-72 sm:h-96 md:h-[30rem] lg:h-[34rem] overflow-hidden rounded-xl shadow-lg">
+        <div className="w-full h-72 sm:h-96 md:h-[30rem] lg:h-[34rem] overflow-hidden">
           <div
             ref={carouselRef}
             className="flex w-full h-full transition-all duration-700 ease-in-out overflow-x-scroll scroll-smooth scrollbar-hide"
@@ -58,12 +58,13 @@ export default function AboutUs() {
                 key={i}
                 src={src}
                 alt={`About us ${i}`}
-                className="w-full flex-shrink-0 object-cover object-center h-full rounded-xl"
-                style={{ minWidth: "100%" }}
+                className="w-full flex-shrink-0 object-contain object-center h-full rounded-xl"
+                style={{ minWidth: "100%", backgroundColor: "transparent" }}
               />
             ))}
           </div>
         </div>
+
 
         {/* Right Side - Content */}
         <div>
