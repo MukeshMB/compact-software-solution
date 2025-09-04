@@ -22,10 +22,12 @@ const highlightPoints = [
 
 // Loading Spinner Component
 type SpinnerSize = "sm" | "md" | "lg" | "xl";
+
 interface LoadingSpinnerProps {
   size?: SpinnerSize;
   className?: string;
 }
+
 const LoadingSpinner = ({ size = "md", className = "" }: LoadingSpinnerProps) => {
   const sizeClasses: Record<SpinnerSize, string> = {
     sm: "w-4 h-4",
@@ -39,7 +41,7 @@ const LoadingSpinner = ({ size = "md", className = "" }: LoadingSpinnerProps) =>
       <Loader2 className={`animate-spin text-blue-600 ${sizeClasses[size]}`} />
     </div>
   );
-};
+}
 
 // Image with Loading State Component
 interface ImageWithLoaderProps {
@@ -50,6 +52,7 @@ interface ImageWithLoaderProps {
   onError?: () => void;
   onLoad?: () => void;
 }
+
 const ImageWithLoader = ({ src, alt, className, fallback, onError, onLoad }: ImageWithLoaderProps) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -115,6 +118,7 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
 
   // Minimum swipe distance
   const minSwipeDistance = 50;
+  const totalImages = 23;
 
   // Load gallery images
   useEffect(() => {
@@ -123,7 +127,7 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
         setLoading(true);
         const imageList = [];
 
-        for (let i = 1; i <= 23; i++) {
+        for (let i = 1; i <= totalImages; i++) {
           const jpegPath = `/about/${i}.jpeg`;
 
           imageList.push({
@@ -147,11 +151,11 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
   }, [isOpen]);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % validImages.length);
+    setCurrentImageIndex((prev) => Math.min(prev + 1, totalImages - 1));
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + validImages.length) % validImages.length);
+    setCurrentImageIndex((prev) => Math.max(0, prev - 1));
   };
 
   const goToImage = (index: number) => {
@@ -197,9 +201,7 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
   }, [isOpen]);
 
   // Filter out images that failed to load completely
-  const validImages = galleryImages.filter(img =>
-    imageLoadError[img.id] !== 'both-failed'
-  );
+  const validImages = galleryImages;
 
   if (!isOpen) return null;
 
@@ -320,31 +322,37 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
               </div>
 
               {/* Thumbnail Navigation */}
-              <div className="p-2 sm:p-4 border-t border-white/10 bg-black/10">
-                <div className="max-h-20 sm:max-h-24 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-                  <div className="flex gap-2 justify-center pb-2">
+              <div className="p-2 sm:m-4 border-t border-white/10 bg-black/10">
+                <div
+                  className="max-h-20 sm:max-h-24 overflow-y-hidden overflow-x-auto custom-scrollbar"
+                >
+                  <div className="flex gap-2 justify-start pb-2">
                     {validImages.slice(0, 50).map((img, index) => (
                       <motion.button
                         key={img.id}
                         onClick={() => goToImage(index)}
                         className={`relative w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${index === currentImageIndex
-                          ? 'border-blue-400 ring-2 ring-blue-400/50 scale-110'
-                          : 'border-white/20 hover:border-white/40'
+                            ? "border-blue-400 ring-2 ring-blue-400/50 scale-105"
+                            : "border-white/20 hover:border-white/40"
                           }`}
-                        whileHover={{ scale: index === currentImageIndex ? 1.1 : 1.05 }}
+                        whileHover={{ scale: index === currentImageIndex ? 1.02 : 1.02 }}
                         whileTap={{ scale: 0.95 }}
+                        ref={index === currentImageIndex ? (el) => el?.scrollIntoView({ behavior: "smooth", inline: "center" }) : null}
                       >
                         <ImageWithLoader
-                          src={imageLoadError[img.id] === 'jpg-failed' ? img.fallback : img.src}
+                          src={
+                            imageLoadError[img.id] === "jpg-failed" ? img.fallback : img.src
+                          }
                           alt={img.alt}
                           className="w-full h-full object-cover"
                           onError={() => {
-                            if (imageLoadError[img.id] !== 'jpg-failed') {
+                            if (imageLoadError[img.id] !== "jpg-failed") {
                               handleImageError(img.id, false);
                             } else {
                               handleImageError(img.id, true);
                             }
-                          }} fallback={undefined} onLoad={undefined} />
+                          }}
+                        />
                         {index === currentImageIndex && (
                           <div className="absolute inset-0 bg-blue-500/20 border-2 border-blue-400 rounded-lg"></div>
                         )}
@@ -358,6 +366,7 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
                   <p className="text-xs text-white/60">Swipe left or right to navigate</p>
                 </div>
               </div>
+
             </>
           ) : (
             <div className="flex-1 flex items-center justify-center">

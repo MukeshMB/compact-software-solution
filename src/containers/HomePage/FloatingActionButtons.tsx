@@ -9,7 +9,7 @@ export default function FloatingActionButtons() {
         >
             {/* WhatsApp Button */}
             <a
-                href="https://wa.me/919667337837?text=Hi%20Compact%20Softwares,%20I%20need%20to%20discuss%20about%20my%20project"
+                href="https://wa.me/917872727171?text=Hello Compact Softwares & Services Team, I visited your website and would like to request a demo of your products."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-white transition-all duration-300 transform hover:scale-110 relative group flex items-center justify-center"
